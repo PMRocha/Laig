@@ -1,0 +1,16 @@
+#ifndef TPinterface_H
+#define TPinterface_H
+
+#include "CGFinterface.h"
+#include "XMLScene.h"
+class TPinterface: public CGFinterface {
+public:
+		TPinterface();
+		virtual void initglut();
+		virtual void processglut(GLUI_Control *ctrl);
+
+		virtual void processKeyboard(unsigned char key, int x, int y);
+};
+
+
+#endif

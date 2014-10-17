@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{896722CA-5790-4B53-9ED9-6BBE25F37594}</ProjectGuid>
+    <RootNamespace>LAIGvs10</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\Users\Pedro\Desktop\primeira entrega\LAIGvs10\include\CGF;C:\Users\Pedro\Desktop\primeira entrega\LAIGvs10\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>%(AdditionalDependencies);lib\TinyXML.lib;lib\glew32.lib;lib\glew32mx.lib;lib\glew32mxs.lib;lib\glew32s.lib;lib\glui32.lib;lib\glui32d.lib;lib\glut32.lib;;lib\CGFlib.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Appearance.cpp" />
+    <ClCompile Include="src\Camera.cpp" />
+    <ClCompile Include="src\Globals.cpp" />
+    <ClCompile Include="src\Graph.cpp" />
+    <ClCompile Include="src\Light.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Node.cpp" />
+    <ClCompile Include="src\OrthoCamera.cpp" />
+    <ClCompile Include="src\PerspectiveCamera.cpp" />
+    <ClCompile Include="src\Rotation.cpp" />
+    <ClCompile Include="src\Scaling.cpp" />
+    <ClCompile Include="src\SceneCylinder.cpp" />
+    <ClCompile Include="src\SceneObject.cpp" />
+    <ClCompile Include="src\SceneRectangle.cpp" />
+    <ClCompile Include="src\SceneSphere.cpp" />
+    <ClCompile Include="src\SceneTorus.cpp" />
+    <ClCompile Include="src\SceneTriangle.cpp" />
+    <ClCompile Include="src\Texture.cpp" />
+    <ClCompile Include="src\tinystr.cpp" />
+    <ClCompile Include="src\tinyxml.cpp" />
+    <ClCompile Include="src\tinyxmlerror.cpp" />
+    <ClCompile Include="src\tinyxmlparser.cpp" />
+    <ClCompile Include="src\TPinterface.cpp" />
+    <ClCompile Include="src\Transformation.cpp" />
+    <ClCompile Include="src\Translation.cpp" />
+    <ClCompile Include="src\XMLScene.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\CGF\CGFappearance.h" />
+    <ClInclude Include="include\CGF\CGFapplication.h" />
+    <ClInclude Include="include\CGF\CGFaxis.h" />
+    <ClInclude Include="include\CGF\CGFcamera.h" />
+    <ClInclude Include="include\CGF\CGFinterface.h" />
+    <ClInclude Include="include\CGF\CGFlight.h" />
+    <ClInclude Include="include\CGF\CGFobject.h" />
+    <ClInclude Include="include\CGF\CGFscene.h" />
+    <ClInclude Include="include\CGF\CGFshader.h" />
+    <ClInclude Include="include\CGF\CGFtexture.h" />
+    <ClInclude Include="include\glew.h" />
+    <ClInclude Include="include\glext.h" />
+    <ClInclude Include="include\glui.h" />
+    <ClInclude Include="include\glut.h" />
+    <ClInclude Include="include\glxew.h" />
+    <ClInclude Include="include\GL\glew.h" />
+    <ClInclude Include="include\GL\glext.h" />
+    <ClInclude Include="include\GL\glui.h" />
+    <ClInclude Include="include\GL\glut.h" />
+    <ClInclude Include="include\GL\glxew.h" />
+    <ClInclude Include="include\GL\wglew.h" />
+    <ClInclude Include="include\tinystr.h" />
+    <ClInclude Include="include\tinyxml.h" />
+    <ClInclude Include="include\wglew.h" />
+    <ClInclude Include="src\Appearance.h" />
+    <ClInclude Include="src\Camera.h" />
+    <ClInclude Include="src\Globals.h" />
+    <ClInclude Include="src\Graph.h" />
+    <ClInclude Include="src\Light.h" />
+    <ClInclude Include="src\Node.h" />
+    <ClInclude Include="src\OrthoCamera.h" />
+    <ClInclude Include="src\PerspectiveCamera.h" />
+    <ClInclude Include="src\Point.h" />
+    <ClInclude Include="src\Rotation.h" />
+    <ClInclude Include="src\Scaling.h" />
+    <ClInclude Include="src\SceneCylinder.h" />
+    <ClInclude Include="src\SceneObject.h" />
+    <ClInclude Include="src\SceneRectangle.h" />
+    <ClInclude Include="src\SceneSphere.h" />
+    <ClInclude Include="src\SceneTorus.h" />
+    <ClInclude Include="src\SceneTriangle.h" />
+    <ClInclude Include="src\Texture.h" />
+    <ClInclude Include="src\tinystr.h" />
+    <ClInclude Include="src\tinyxml.h" />
+    <ClInclude Include="src\TPinterface.h" />
+    <ClInclude Include="src\Transformation.h" />
+    <ClInclude Include="src\Translation.h" />
+    <ClInclude Include="src\XMLScene.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="include\README.txt" />
+    <None Include="src\bloodyPrints.jpg" />
+    <None Include="src\bloodyWall.jpg" />
+    <None Include="src\lamp.png" />
+    <None Include="src\pine.jpg" />
+    <None Include="src\pine.png" />
+    <None Include="src\pTape.jpg" />
+    <None Include="src\scratchedWall.jpg" />
+    <None Include="src\table.png" />
+    <None Include="src\test1.jpg" />
+    <None Include="src\textura.jpeg" />
+    <None Include="src\vase.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
