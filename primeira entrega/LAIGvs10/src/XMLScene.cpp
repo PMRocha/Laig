@@ -22,59 +22,45 @@ void XMLScene::init()
 void XMLScene::drawObjects()
 {
 	vector<Node*> nodes = sceneGraph->getNodes();
-	unsigned int fatherInd;
+
 	string id=sceneGraph->getRootId();
 	vector<string> sonIds;
 
 	glPushMatrix();
 	//searches for the father and gets sons
-	for (fatherInd=0;fatherInd<nodes.size();fatherInd++)
-	{
-		if(id==nodes[fatherInd]->getId())
-		{
 
-			break;
-		}
-	}
-
-
-	sonIds=nodes[fatherInd]->getChildNodeIds();
-	auxDrawObjectsRoot(nodes[fatherInd]->getId());
+	auxDrawObjectsRoot();
 	glPopMatrix();
 }
 
-void XMLScene::auxDrawObjectsRoot(string fatherInd)
+void XMLScene::auxDrawObjectsRoot()
 {
-	//searches son position on vector
-	unsigned int sonInd;
+	
 	vector<string> childrenIds;
 	vector<Node*> nodes = sceneGraph->getNodes();
 	vector<SceneObject*> objects;
 
 
-	for (sonInd=0;sonInd<nodes.size();sonInd++)
-	{
-
-			objects=nodes[sonInd]->getObjects();
-			childrenIds=nodes[sonInd]->getChildNodeIds();
+			objects=nodes[0]->getObjects();
+			childrenIds=nodes[0]->getChildNodeIds();
 
 			glPushMatrix();
 
 
-			glMultMatrixf(& nodes[sonInd]->transMatrix[0]);
+			glMultMatrixf(& nodes[0]->transMatrix[0]);
 
 			glTexParameterf( GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT );
 			glTexParameterf( GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT );
 
 			//set appearance
-			cout << nodes[sonInd]->getId()<<endl ;
-			if(nodes[sonInd]->getNodeAppearance().second->getSWrap()!=nodes[sonInd]->getTextS())
-				nodes[sonInd]->setTextS(nodes[sonInd]->getNodeAppearance().second->getSWrap());
+			
+			if(nodes[0]->getNodeAppearance().second->getSWrap()!=nodes[0]->getTextS())
+				nodes[0]->setTextS(nodes[0]->getNodeAppearance().second->getSWrap());
 
-			if(nodes[sonInd]->getNodeAppearance().second->getTWrap()!=nodes[sonInd]->getTextT())
-				nodes[sonInd]->setTextT(nodes[sonInd]->getNodeAppearance().second->getTWrap());
+			if(nodes[0]->getNodeAppearance().second->getTWrap()!=nodes[0]->getTextT())
+				nodes[0]->setTextT(nodes[0]->getNodeAppearance().second->getTWrap());
 
-			nodes[sonInd]->getNodeAppearance().second->apply();
+			nodes[0]->getNodeAppearance().second->apply();
 
 
 			for (unsigned int j=0;j<objects.size();j++)
@@ -85,10 +71,10 @@ void XMLScene::auxDrawObjectsRoot(string fatherInd)
 			//if child is found
 			if(childrenIds.size()>0)
 			{
-				auxDrawObjects(childrenIds,nodes[sonInd]->getNodeAppearance());
+				auxDrawObjects(childrenIds,nodes[0]->getNodeAppearance());
 			}
 			glPopMatrix();
-		}
+		
 }
 
 void XMLScene::auxDrawObjects(vector<string> sonIds,pair<string,Appearance*> fatherAppearance)
@@ -121,7 +107,7 @@ void XMLScene::auxDrawObjects(vector<string> sonIds,pair<string,Appearance*> fat
 				glTexParameterf( GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT );
 
 				//set appearance
-				if(nodes[sonInd]->getNodeAppearance().first=="")
+				if(nodes[sonInd]->getNodeAppearance().first=="inherit")
 				{
 					if(fatherAppearance.second->getSWrap()!=nodes[sonInd]->getTextS())
 						nodes[sonInd]->setTextS(fatherAppearance.second->getSWrap());
@@ -268,6 +254,7 @@ void XMLScene::processCameras(TiXmlElement* camerasElement)
 		read3Float("pos", perspectiveElement, position[0], position[1], position[2]);
 		read3Float("target", perspectiveElement, target[0], target[1], target[2]);
 		id=(char*)perspectiveElement->Attribute("id");
+		bool activated=id==rootId;
 		cam = new PerspectiveCamera(id==rootId,near, far, angle, position[0], position[1],
 			position[2], target[0], target[1], target[2]);
 		sceneCameras.push_back(make_pair(id,cam));
@@ -307,18 +294,15 @@ void XMLScene::processLights(TiXmlElement* lights)
 		while(component != NULL)
 		{
 			if(component->Attribute("type")=="ambient"){
-				read4Float("value", element, ambient[0], ambient[1], ambient[2],
-					ambient[3]);
+				read4Float("value", element, ambient[0], ambient[1], ambient[2],ambient[3]);
 			}
 
 			if(component->Attribute("type")=="diffuse"){
-				read4Float("value", element, diffuse[0], diffuse[1], diffuse[2],
-					diffuse[3]);
+				read4Float("value", element, diffuse[0], diffuse[1], diffuse[2],diffuse[3]);
 			}
 
 			if(component->Attribute("type")=="specular"){
-				read4Float("value", element, specular[0], specular[1], specular[2],
-					specular[3]);
+				read4Float("value", element, specular[0], specular[1], specular[2],specular[3]);
 			}
 			component=component->NextSiblingElement();
 		}
@@ -424,7 +408,7 @@ void XMLScene::processGraph(TiXmlElement* graphElement)
 	{
 		Node* node = new Node(nodeElement->Attribute("id"));
 		TiXmlElement* transformations = nodeElement->FirstChildElement("transforms");
-		TiXmlElement* transformation=transformations->FirstChildElement();
+		TiXmlElement* transformation = transformations->FirstChildElement();
 
 		while(transformation!=NULL)
 		{
@@ -462,7 +446,7 @@ void XMLScene::processGraph(TiXmlElement* graphElement)
 		}
 		else
 		{
-			node->setNodeAppearance(make_pair("",new Appearance()));
+			node->setNodeAppearance(make_pair("inherit",new Appearance()));
 		}
 		TiXmlElement* primitive = nodeElement->FirstChildElement("primitives");
 		TiXmlElement* primitiveAnalyzer = primitive->FirstChildElement();
@@ -483,7 +467,7 @@ void XMLScene::processGraph(TiXmlElement* graphElement)
 				read3Float("xyz1",primitiveAnalyzer,xyz1[0],xyz1[1],xyz1[2]);
 				read3Float("xyz2",primitiveAnalyzer,xyz2[0],xyz2[1],xyz2[2]);
 				read3Float("xyz3",primitiveAnalyzer,xyz3[0],xyz3[1],xyz3[2]);
-				cout << xyz1[0]<< " " << xyz1[1] <<" "<< xyz1[2]<< endl;
+				
 				SceneObject* triangle = new SceneTriangle(xyz1,xyz2,xyz3);
 				node->addObject(triangle);
 			}
@@ -520,7 +504,7 @@ void XMLScene::processGraph(TiXmlElement* graphElement)
 				read1Float("outer",primitiveAnalyzer,outer);
 				read1Int("slices",primitiveAnalyzer,slices);
 				read1Int("loops",primitiveAnalyzer,loops);
-				cout << inner<< " " << outer <<" "<< slices<<" "  << loops;
+				
 				SceneObject* thorus = new SceneTorus(inner,outer,slices,loops);
 				node->addObject(thorus);
 			}
@@ -531,7 +515,7 @@ void XMLScene::processGraph(TiXmlElement* graphElement)
 		while(descendantsAnalyzer!=NULL)
 		{
 			node->addchildId(descendantsAnalyzer->Attribute("id"));
-			cout << descendantsAnalyzer->Attribute("id") << endl;
+			
 			descendantsAnalyzer=descendantsAnalyzer->NextSiblingElement();
 		}
 

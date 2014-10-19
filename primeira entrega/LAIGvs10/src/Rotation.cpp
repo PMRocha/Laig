@@ -13,12 +13,10 @@ Rotation::~Rotation(void)
 
 void Rotation::apply()
 {
-	//glRotatef(angle,1,0,0);
 	if(axis=="x")
 		glRotatef(angle,1,0,0);
 	else if(axis=="y")
 		glRotatef(angle,0,1,0);
 	else if(axis=="z")
 		glRotatef(angle,0,0,1);
-		
 }

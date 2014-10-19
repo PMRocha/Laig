@@ -57,7 +57,7 @@ public:
 	void drawObjects();
 	void auxDrawObjects(vector<string> sonIds,pair<string,Appearance*> fatherAppearance);
 	void selectDrawMode();
-	void auxDrawObjectsRoot(string fatherInd);
+	void auxDrawObjectsRoot();
 private:
 	Globals* globalVariables;
 	vector<Light*> sceneLights;

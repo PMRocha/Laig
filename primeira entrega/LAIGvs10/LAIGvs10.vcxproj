@@ -38,7 +38,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\Pedro\Desktop\primeira entrega\LAIGvs10\include\CGF;C:\Users\Pedro\Desktop\primeira entrega\LAIGvs10\include;$(IncludePath)</IncludePath>
+    <IncludePath>include\CGF;include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
