@@ -1,0 +1,13 @@
+#Packages
+#####
+*.zip
+
+#VS project related files
+primeira\ entrega/ipch
+*.ilk
+*.pdb
+*.db
+*.sdf
+*.sln
+*.suo
+primeira\ entrega/LAIGvs10/Debug
