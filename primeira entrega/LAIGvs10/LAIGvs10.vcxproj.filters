@@ -93,6 +93,9 @@
     <ClCompile Include="src\XMLScene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SceneDiamond.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Appearance.h">
@@ -239,6 +242,9 @@
     <ClInclude Include="include\wglew.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SceneDiamond.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="src\bloodyPrints.jpg">
@@ -273,9 +279,6 @@
     </None>
     <None Include="src\vase.png">
       <Filter>Resource Files</Filter>
-    </None>
-    <None Include="include\README.txt">
-      <Filter>Header Files</Filter>
     </None>
   </ItemGroup>
 </Project>

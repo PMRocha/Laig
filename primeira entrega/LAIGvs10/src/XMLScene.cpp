@@ -138,7 +138,7 @@ void XMLScene::auxDrawObjects(vector<string> sonIds,pair<string,Appearance*> fat
 				//if child is found
 				if(childrenIds.size()>0)
 				{
-					if(nodes[sonInd]->getNodeAppearance().first=="")
+					if(nodes[sonInd]->getNodeAppearance().first=="inherit")
 					{
 						auxDrawObjects(childrenIds,fatherAppearance);
 					}

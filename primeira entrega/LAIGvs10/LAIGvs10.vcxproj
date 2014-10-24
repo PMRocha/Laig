@@ -64,6 +64,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="SceneDiamond.cpp" />
     <ClCompile Include="src\Appearance.cpp" />
     <ClCompile Include="src\Camera.cpp" />
     <ClCompile Include="src\Globals.cpp" />
@@ -116,6 +117,7 @@
     <ClInclude Include="include\tinystr.h" />
     <ClInclude Include="include\tinyxml.h" />
     <ClInclude Include="include\wglew.h" />
+    <ClInclude Include="SceneDiamond.h" />
     <ClInclude Include="src\Appearance.h" />
     <ClInclude Include="src\Camera.h" />
     <ClInclude Include="src\Globals.h" />
@@ -142,7 +144,6 @@
     <ClInclude Include="src\XMLScene.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="include\README.txt" />
     <None Include="src\bloodyPrints.jpg" />
     <None Include="src\bloodyWall.jpg" />
     <None Include="src\lamp.png" />

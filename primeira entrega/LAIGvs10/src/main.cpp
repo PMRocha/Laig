@@ -12,7 +12,7 @@ int main (int argc, char* argv[])
 	if(argc==2)
     xml = new XMLScene(argv[1]);
 	else
-	xml = new XMLScene("test.anf");
+	xml = new XMLScene("wall-e.xml");
 	try {
 		app.init(&argc, argv);
 		 

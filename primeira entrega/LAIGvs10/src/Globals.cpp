@@ -77,7 +77,7 @@ int Globals::setValue(string s){
 		return GL_FRONT;
 	}else if(s=="both"){
 		return GL_FRONT_AND_BACK;
-	}else if(s=="CCW"){
+	}else if(s=="ccw"){
 		return GL_CCW;
 	}
 	return GL_CW;
