@@ -62,10 +62,16 @@ void XMLScene::auxDrawObjectsRoot()
 
 			nodes[0]->getNodeAppearance().second->apply();
 
-
-			for (unsigned int j=0;j<objects.size();j++)
-			{
-				objects[j]->draw();
+			if(nodes[0]->getDisplayList())
+				{
+					glCallList(nodes[0]->getDisplayListId());
+				}
+			else{
+				for (unsigned int j=0;j<objects.size();j++)
+				{
+				
+					objects[j]->draw();
+				}
 			}
 
 			//if child is found
@@ -406,7 +412,11 @@ void XMLScene::processGraph(TiXmlElement* graphElement)
 	sceneGraph->setRootId(rootid);
 	while(nodeElement!=NULL)
 	{
-		Node* node = new Node(nodeElement->Attribute("id"));
+		bool displayList=false;
+		string nodeId = nodeElement->Attribute("id");
+		if(nodeElement->Attribute("displaylist") != NULL)
+			nodeElement->QueryBoolAttribute("displaylist",&displayList);
+		Node* node = new Node(nodeId, displayList);
 		TiXmlElement* transformations = nodeElement->FirstChildElement("transforms");
 		TiXmlElement* transformation = transformations->FirstChildElement();
 
@@ -649,6 +659,8 @@ void XMLScene::loadFile()
 
 	TiXmlElement* graphElement = anfElement->FirstChildElement("graph");
 	processGraph(graphElement);
+	//sets the children to the correct bool
+	sceneGraph->setChildDisplay();
 
 }
 

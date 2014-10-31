@@ -12,8 +12,10 @@ class Node
 	vector<SceneObject*> objects;
 	vector<string> childNodeIds;
 	float textT,textS;
+	bool DisplayList;
+	GLuint displayListId;
 public:
-	Node(string id);
+	Node(string id, bool displaylist=false);
 	Node(void);
 	~Node(void);
 	string getId();
@@ -33,6 +35,10 @@ public:
 	void setTextS(float s);
 	float getTextT();
 	float getTextS();
+	bool getDisplayList();
+	void setDisplayList(bool displayList);
+	void createDisplayList(GLuint ID);
+	GLuint getDisplayListId();
 };
 
 #endif

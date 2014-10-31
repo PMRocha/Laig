@@ -4,8 +4,9 @@
 Node::Node(void)
 {
 }
-Node::Node(string id)
+Node::Node(string id, bool displaylist)
 {
+	DisplayList=displaylist;
 	this->id=id;
 	textS=1;
 	textT=1;
@@ -104,4 +105,26 @@ float Node::getTextT()
 float Node::getTextS()
 {
 	return textS;
+}
+
+bool Node::getDisplayList(){
+	return DisplayList;
+}
+
+void Node::setDisplayList(bool displayList){
+	DisplayList = displayList;
+}
+
+void Node::createDisplayList(GLuint ID){
+	displayListId = ID;
+	glNewList(ID, GL_COMPILE);
+	for(int i=0; i<objects.size();i++)
+	{
+		objects[i]->draw();
+	}
+	glEndList();
+}
+
+GLuint Node::getDisplayListId(){
+	return displayListId;
 }

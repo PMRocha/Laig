@@ -9,6 +9,7 @@ class Graph
 private:
 	string rootid;
 	vector<Node*> nodes;
+	void depthBoolSet(Node* node, bool fatherBool);
 public:
 	void addNode(Node* node);
 	void setRootId(string rootId);
@@ -19,6 +20,8 @@ public:
 	string getRootId();
 	Graph(void);
 	~Graph(void);
+	void setChildDisplay();
+	void setDisplayList();
 };
 
 #endif

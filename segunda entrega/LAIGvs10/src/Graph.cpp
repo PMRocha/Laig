@@ -113,3 +113,35 @@ string Graph::getRootId()
 {
 	return rootid;
 }
+
+void Graph::setChildDisplay(){
+	for(int i=0; i<nodes.size(); i++)
+	{
+		if(nodes[i]->getId()==rootid)
+			depthBoolSet(nodes[i],nodes[i]->getDisplayList());
+	}
+}
+
+void Graph::depthBoolSet(Node* node, bool fatherBool){
+
+	vector<string> children = node->getChildNodeIds(); 
+	cout << children.size() << endl;
+	for(int i=0; i<children.size();i++){
+		for(int j=0; j<nodes.size();j++){
+			if(nodes[j]->getId()==children[i]){
+				if(fatherBool)
+					nodes[j]->setDisplayList(true);
+				
+				depthBoolSet(nodes[j],nodes[j]->getDisplayList());
+			}
+		}
+	}
+}
+
+void Graph::setDisplayList(){
+	GLuint ID=glGenLists(nodes.size());
+	for(int i=0; i<nodes.size();i++){
+		nodes[i]->createDisplayList(ID);
+		ID++;
+	}
+}
