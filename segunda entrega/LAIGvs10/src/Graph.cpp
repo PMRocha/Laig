@@ -125,7 +125,7 @@ void Graph::setChildDisplay(){
 void Graph::depthBoolSet(Node* node, bool fatherBool){
 
 	vector<string> children = node->getChildNodeIds(); 
-	cout << children.size() << endl;
+	
 	for(int i=0; i<children.size();i++){
 		for(int j=0; j<nodes.size();j++){
 			if(nodes[j]->getId()==children[i]){

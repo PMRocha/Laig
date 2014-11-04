@@ -23,6 +23,7 @@
 #include "SceneSphere.h"
 #include "SceneTorus.h"
 #include "SceneObject.h"
+#include "ScenePlane.h"
 #include "Appearance.h"
 #include "Texture.h"
 

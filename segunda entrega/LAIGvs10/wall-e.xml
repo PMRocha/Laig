@@ -153,11 +153,12 @@
                 <noderef id="olhos" />
 				<noderef id="planet" />
                 <noderef id="ceu" />
+				<!--<noderef id="plane" />-->
 
             </descendants>
         </node>
 
-        <!--<node id="example">
+        <node id="example">
             <transforms>
                 <transform type="translate" to="0 6 0" />
                 <transform type="rotate" axis="x" angle="90" />
@@ -175,15 +176,26 @@
 
             <descendants>
             </descendants>
-        </node> -->
+        </node> 
 
 
         <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
         <!-- ||||||||||||||||||||||||||||||||CORPO|||||||||||||||||||||||||||||-->
         <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
 
+		<node id="plane">
+			<transforms>
+				<appearanceref id="ss" />
+			</transforms>
+			<primitives>
+				<plane parts="6"/>
+			</primitives>
+			<descendants>
+			</descendants>
+		</node>
 		
-         <node id="corpo" >
+		
+         <node id="corpo" displaylist=”true”>
             <transforms>
                 <transform type="translate" to="0 1.5 0" />
             </transforms>

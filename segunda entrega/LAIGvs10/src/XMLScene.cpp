@@ -518,6 +518,16 @@ void XMLScene::processGraph(TiXmlElement* graphElement)
 				SceneObject* thorus = new SceneTorus(inner,outer,slices,loops);
 				node->addObject(thorus);
 			}
+
+			else if(primitiveAnalyzer->Attribute("parts")!=NULL)
+			{
+				int parts;
+				read1Int("parts",primitiveAnalyzer,parts);
+				
+				SceneObject* plane = new ScenePlane(parts);
+				node->addObject(plane);
+			}
+
 			primitiveAnalyzer = primitiveAnalyzer->NextSiblingElement();
 		}
 		TiXmlElement* descendants = nodeElement->FirstChildElement("descendants");
