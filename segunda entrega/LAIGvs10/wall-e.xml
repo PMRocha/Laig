@@ -135,7 +135,7 @@
 
             <transforms>
 
-                <transform type="translate" to="0 0 0" />
+                <!-- <transform type="translate" to="0 0 0" /> -->
 
             </transforms>
          
@@ -147,18 +147,18 @@
               
              <!-- bloco "descendants" -->
             <descendants>
-                <noderef id="corpo" />
+                <!-- <noderef id="corpo" />
                 <noderef id="pernas" />
                 <noderef id="pescoco" />
                 <noderef id="olhos" />
 				<noderef id="planet" />
-                <noderef id="ceu" />
-				<!--<noderef id="plane" />-->
+                <noderef id="ceu" /> -->
+				<noderef id="planetest" />
 
             </descendants>
         </node>
 
-        <node id="example">
+        <!-- <node id="example">
             <transforms>
                 <transform type="translate" to="0 6 0" />
                 <transform type="rotate" axis="x" angle="90" />
@@ -176,19 +176,20 @@
 
             <descendants>
             </descendants>
-        </node> 
+        </node> --> 
 
 
         <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
         <!-- ||||||||||||||||||||||||||||||||CORPO|||||||||||||||||||||||||||||-->
         <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
 
-		<node id="plane">
+		<node id="planetest">
 			<transforms>
-				<appearanceref id="ss" />
 			</transforms>
+			<appearanceref id="ss" />
 			<primitives>
-				<plane parts="6"/>
+				<plane parts="1"/>
+				<rectangle xy1="-1 -1" xy2="1 1" />
 			</primitives>
 			<descendants>
 			</descendants>
@@ -511,7 +512,7 @@
             <transforms>
                 <transform type="translate" to="0 2.5 0" />
                 <transform type="rotate" axis="x" angle="-90" />
-                <transform type="scale" factor="2.1 1 5" /> -->
+                <transform type="scale" factor="2.1 1 5" />
              </transforms>
             <appearanceref id="ss" />
             <primitives>

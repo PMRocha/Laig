@@ -182,7 +182,7 @@ void XMLScene::display()
 		sceneLights[i]->update();
 	}
 
-
+	axis.draw();
 	selectDrawMode();
 	drawObjects();
 	glutSwapBuffers();
@@ -523,9 +523,10 @@ void XMLScene::processGraph(TiXmlElement* graphElement)
 			{
 				int parts;
 				read1Int("parts",primitiveAnalyzer,parts);
-				
+				cout << "hello" << endl;
 				SceneObject* plane = new ScenePlane(parts);
 				node->addObject(plane);
+				cout << "goodbye" << endl;
 			}
 
 			primitiveAnalyzer = primitiveAnalyzer->NextSiblingElement();

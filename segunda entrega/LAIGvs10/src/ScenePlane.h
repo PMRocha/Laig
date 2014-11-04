@@ -4,6 +4,8 @@
 #include <string>
 #include "CGFtexture.h"
 #include "SceneObject.h"
+#include <iomanip>
+#include <iostream>
 
 using namespace std;
 

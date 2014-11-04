@@ -3,21 +3,21 @@
 ScenePlane::ScenePlane(int parts){
 	this->parts=parts;
 	PlaneTex = new CGFtexture("tire.png");
-	dimensions = parts+1;
+	dimensions = (parts+1)*(parts+1);
 
 	texturePoints = new GLfloat*[dimensions];
 	for (int i = 0; i < dimensions; ++i)
 		texturePoints[i] = new GLfloat[3];
-
+	
 	controlPoints = new GLfloat*[dimensions];
 	for (int i = 0; i < dimensions; ++i)
 		controlPoints[i] = new GLfloat[3];
 
-
+	
 	normalPoints = new GLfloat*[dimensions];
 	for (int i = 0; i < dimensions; ++i)
 		normalPoints[i] = new GLfloat[3];
-
+	
 	calcControlPoints();
 	calcNormalPoints();
 	calcTexPoints();
@@ -41,33 +41,44 @@ ScenePlane::~ScenePlane(){
 
 void ScenePlane::calcControlPoints(){
 	int index=0;
-	for(float i=0; i<=1;i+(1/parts)){
-		for(float j=0;j<=1;(1/parts)){
-		controlPoints[index][0] = j;
-		controlPoints[index][1] = 0.0;
-		controlPoints[index][2] = i;
-		index+=3;
+	float delta = (float)1/parts, lastX=0, lastZ=0;
+
+	for(int i=0; i<=parts;i++){
+		lastX=0;
+		for(int j=0;j<=parts;j++){
+			cout << i << "    " << j << endl;
+			controlPoints[index][0] = lastX;
+			controlPoints[index][1] = 0.0;
+			controlPoints[index][2] = lastZ;
+			lastX+=delta;
+			index++;
 		}
+		lastZ+=delta;
 	}
 }
 
 void ScenePlane::calcNormalPoints(){
-	for(int i=0; i<dimensions;i+3){
-		normalPoints[i][0]  = 0.0;
-		normalPoints[i+1][1] = 1.0;
-		normalPoints[i+2][2] = 0.0;
+	for(int i=0; i<dimensions;i++){
+			normalPoints[i][0] = 0.0;
+			normalPoints[i][1] = 1.0;
+			normalPoints[i][2] = 0.0;
 	}
 }
 
 void ScenePlane::calcTexPoints(){
 	int index=0;
-	for(GLfloat i=0; i<=1;i+(1/parts)){
-		for(GLfloat j=0;j<=1;(1/parts)){
-		controlPoints[index][0] = j;
-		controlPoints[index+1][1] = 0.0;
-		controlPoints[index+2][2] = i;
-		index+=3;
+	float delta = (float)1/parts, lastX=0, lastZ=0;
+
+	for(int i=0; i<=parts;i++){
+		lastX=0;
+		for(int j=0;j<=parts;j++){
+			texturePoints[index][0] = lastX;
+			texturePoints[index][1] = 0.0;
+			texturePoints[index][2] = lastZ;
+			lastX+=delta;
+			index++;
 		}
+		lastZ+=delta;
 	}
 }
 
@@ -75,9 +86,9 @@ void ScenePlane::draw(){
 
 
 	glColor3f(1.0,1.0,1.0);
-	glMap2f(GL_MAP2_VERTEX_3, 0.0, 1.0, 3, parts,  0.0, 1.0, 3*parts, parts,  &controlPoints[0][0]);
-	glMap2f(GL_MAP2_NORMAL,   0.0, 1.0, 3, parts,  0.0, 1.0, 3*parts, parts,  &normalPoints[0][0]);
-	glMap2f(GL_MAP2_TEXTURE_COORD_2,  0.0, 1.0, 2, parts,  0.0, 1.0, 3*parts, parts,  &texturePoints[0][0]);
+	glMap2f(GL_MAP2_VERTEX_3, 0.0, 1.0, 3, 1,  0.0, 1.0, 6, 1,  &controlPoints[0][0]);
+	glMap2f(GL_MAP2_NORMAL,   0.0, 1.0, 3, 1,  0.0, 1.0, 6, 2,  &normalPoints[0][0]);
+	glMap2f(GL_MAP2_TEXTURE_COORD_2,  0.0, 1.0, 2, 1,  0.0, 1.0, 4, 1,  &texturePoints[0][0]);
 
 	glEnable(GL_MAP2_VERTEX_3);
 	glEnable(GL_MAP2_NORMAL);
