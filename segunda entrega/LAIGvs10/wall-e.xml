@@ -188,8 +188,8 @@
 			</transforms>
 			<appearanceref id="ss" />
 			<primitives>
-				<plane parts="1"/>
-				<rectangle xy1="-1 -1" xy2="1 1" />
+				<plane parts="2"/>
+				<!-- <rectangle xy1="-1 -1" xy2="1 1" /> -->
 			</primitives>
 			<descendants>
 			</descendants>

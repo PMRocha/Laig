@@ -1,25 +1,23 @@
-#ifndef SCENEPLANE_H
-#define SCENEPLANE_H
+#ifndef _SCENEPLANE_H_
+#define _SCENEPLANE_H_
 
-#include <string>
-#include "CGFtexture.h"
+#include "glui.h"
+#include "glut.h"
 #include "SceneObject.h"
-#include <iomanip>
-#include <iostream>
+#include "CGFtexture.h"
 
-using namespace std;
-
-class ScenePlane : public SceneObject
+class ScenePlane:public SceneObject
 {
-	CGFtexture *PlaneTex;
-	int parts, dimensions;
-	GLfloat **controlPoints, **normalPoints, **texturePoints;
-	void calcTexPoints();
-	void calcNormalPoints();
-	void calcControlPoints();
+private:
+	int part;
+	float controlPoints[4][3];
+	float texturePoints[4][2];
+	float normalPoints[4][3];
+
 public:
-	ScenePlane(int parts);
-	~ScenePlane();
+	ScenePlane(int part);
+	~ScenePlane(void);
 	void draw();
 };
+
 #endif

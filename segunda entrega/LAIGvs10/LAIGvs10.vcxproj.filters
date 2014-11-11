@@ -245,6 +245,9 @@
     <ClInclude Include="src\ScenePlane.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\ScenePatch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="src\bloodyPrints.jpg">

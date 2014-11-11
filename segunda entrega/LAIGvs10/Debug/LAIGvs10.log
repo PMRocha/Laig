@@ -1,10 +1,20 @@
-﻿Build started 11/4/2014 6:01:27 PM.
+﻿Build started 11/11/2014 2:14:01 PM.
      1>Project "C:\Users\Pedro\Desktop\Pedro\Laig\segunda entrega\LAIGvs10\LAIGvs10.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\LAIGvs10.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         D:\VisualStudio2010\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt src\ScenePlane.cpp
+         D:\VisualStudio2010\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt src\ScenePlane.cpp src\TPinterface.cpp src\XMLScene.cpp src\main.cpp
          ScenePlane.cpp
+         Generating Code...
+         Compiling...
+         main.cpp
+         XMLScene.cpp
+     1>c:\users\pedro\desktop\pedro\laig\segunda entrega\laigvs10\src\xmlscene.cpp(360): warning C4101: 'sWrap' : unreferenced local variable
+     1>c:\users\pedro\desktop\pedro\laig\segunda entrega\laigvs10\src\xmlscene.cpp(360): warning C4101: 'tWrap' : unreferenced local variable
+     1>c:\users\pedro\desktop\pedro\laig\segunda entrega\laigvs10\src\xmlscene.cpp(603): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\visualstudio2010\vc\include\stdio.h(325) : see declaration of 'sscanf'
+         TPinterface.cpp
+         Generating Code...
        Link:
          D:\VisualStudio2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Pedro\Desktop\Pedro\Laig\segunda entrega\LAIGvs10\Debug\LAIGvs10.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib lib\TinyXML.lib lib\glew32.lib lib\glew32mx.lib lib\glew32mxs.lib lib\glew32s.lib lib\glui32.lib lib\glui32d.lib lib\glut32.lib lib\CGFlib.lib /MANIFEST /ManifestFile:"Debug\LAIGvs10.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Pedro\Desktop\Pedro\Laig\segunda entrega\LAIGvs10\Debug\LAIGvs10.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Pedro\Desktop\Pedro\Laig\segunda entrega\LAIGvs10\Debug\LAIGvs10.lib" /MACHINE:X86 Debug\Appearance.obj
          Debug\Camera.obj
@@ -55,4 +65,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.16
+Time Elapsed 00:00:03.36
