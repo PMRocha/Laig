@@ -128,3 +128,7 @@ void Node::createDisplayList(GLuint ID){
 GLuint Node::getDisplayListId(){
 	return displayListId;
 }
+
+void Node::setAnimation(Animation* animation){
+	this->animation=animation;
+}

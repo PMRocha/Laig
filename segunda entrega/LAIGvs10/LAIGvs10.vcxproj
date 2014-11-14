@@ -64,6 +64,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Animation.cpp" />
     <ClCompile Include="src\Appearance.cpp" />
     <ClCompile Include="src\Camera.cpp" />
     <ClCompile Include="src\Globals.cpp" />
@@ -73,6 +74,7 @@
     <ClCompile Include="src\Node.cpp" />
     <ClCompile Include="src\OrthoCamera.cpp" />
     <ClCompile Include="src\PerspectiveCamera.cpp" />
+    <ClCompile Include="src\ScenePatch.cpp" />
     <ClCompile Include="src\ScenePlane.cpp" />
     <ClCompile Include="src\Rotation.cpp" />
     <ClCompile Include="src\Scaling.cpp" />
@@ -117,6 +119,7 @@
     <ClInclude Include="include\tinystr.h" />
     <ClInclude Include="include\tinyxml.h" />
     <ClInclude Include="include\wglew.h" />
+    <ClInclude Include="src\Animation.h" />
     <ClInclude Include="src\Appearance.h" />
     <ClInclude Include="src\Camera.h" />
     <ClInclude Include="src\Globals.h" />

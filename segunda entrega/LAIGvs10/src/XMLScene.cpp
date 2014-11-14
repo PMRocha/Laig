@@ -417,6 +417,12 @@ void XMLScene::processGraph(TiXmlElement* graphElement)
 		if(nodeElement->Attribute("displaylist") != NULL)
 			nodeElement->QueryBoolAttribute("displaylist",&displayList);
 		Node* node = new Node(nodeId, displayList);
+
+		string animationID;
+		TiXmlElement* animations = nodeElement->FirstChildElement("animationref");
+		if(animations!=NULL)
+			animationID=animations->Attribute("id");
+
 		TiXmlElement* transformations = nodeElement->FirstChildElement("transforms");
 		TiXmlElement* transformation = transformations->FirstChildElement();
 
@@ -523,10 +529,38 @@ void XMLScene::processGraph(TiXmlElement* graphElement)
 			{
 				int parts;
 				read1Int("parts",primitiveAnalyzer,parts);
-				cout << "hello" << endl;
+
 				SceneObject* plane = new ScenePlane(parts);
 				node->addObject(plane);
-				cout << "goodbye" << endl;
+
+			}
+			else if(strcmp(primitiveAnalyzer->Value(),"patch")==0)
+			{
+				int order,partsU,partsV;
+				float x,y,z;
+				string compute;
+
+				primitiveAnalyzer->QueryIntAttribute("order",&order);
+				primitiveAnalyzer->QueryIntAttribute("partsU",&partsU);
+				primitiveAnalyzer->QueryIntAttribute("partsV",&partsV);
+				compute=primitiveAnalyzer->Attribute("compute");
+
+				ScenePatch* patch = new ScenePatch(order,partsU,partsV,compute);
+
+				TiXmlElement* ControlPoints = primitiveAnalyzer->FirstChildElement("controlpoint");
+
+				while(ControlPoints!=NULL)
+				{
+					ControlPoints->QueryFloatAttribute("x",&x);
+					ControlPoints->QueryFloatAttribute("y",&y);
+					ControlPoints->QueryFloatAttribute("z",&z);
+
+					patch->addCntrPoint(x,y,z);
+
+					ControlPoints = ControlPoints->NextSiblingElement("controlpoint");
+				}
+				node->addObject(patch);
+
 			}
 
 			primitiveAnalyzer = primitiveAnalyzer->NextSiblingElement();
@@ -703,5 +737,41 @@ void XMLScene::selectDrawMode()
 		break;	
 	default:
 		break;
+	}
+}
+
+void XMLScene::processAnimations(TiXmlElement* animationElement){
+	TiXmlElement* element = animationElement->FirstChildElement("animation");
+	while(element!=NULL)
+	{
+		string id = element->Attribute("id"),type=element->Attribute("type");
+		float span;
+		element->QueryFloatAttribute("span",&span);
+		vector<Point> points;
+		if(type == "linear"){
+			Point p;
+			TiXmlElement* child = element->FirstChildElement("controlpoint");
+			while(child!=NULL)
+			{
+				child->QueryFloatAttribute("xx", &p.x);
+				child->QueryFloatAttribute("yy",&p.y);
+				child->QueryFloatAttribute("zz",&p.z);
+				points.push_back(p);
+				child=child->NextSiblingElement();
+			}
+			Animation* animation = new Animation(span,type,points);
+			Animations[id]=animation;
+			element=element->NextSiblingElement();
+		}
+		else{
+			float center[3], radius, startang, rotang;
+			read3Float("center", element, center[0], center[1], center[2]);
+			element->QueryFloatAttribute("radius",&radius);
+			element->QueryFloatAttribute("startang",&startang);
+			element->QueryFloatAttribute("rotang",&rotang);
+			Animation* animation = new Animation(span,type,center[0],center[1],center[2],radius,startang,rotang);
+			Animations[id]=animation;
+			element=element->NextSiblingElement();
+		}
 	}
 }

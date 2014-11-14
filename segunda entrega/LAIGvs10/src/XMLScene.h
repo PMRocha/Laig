@@ -10,6 +10,7 @@
 #include "CGFscene.h"
 #include "tinyxml.h"
 #include "Light.h"
+#include "Animation.h"
 #include "Globals.h"
 #include "OrthoCamera.h"
 #include "PerspectiveCamera.h"
@@ -24,6 +25,7 @@
 #include "SceneTorus.h"
 #include "SceneObject.h"
 #include "ScenePlane.h"
+#include "ScenePatch.h"
 #include "Appearance.h"
 #include "Texture.h"
 
@@ -54,6 +56,7 @@ public:
 	void read3Float(char* attribute,TiXmlElement* element,float &f1,float &f2,float &f3);
 	void read4Float(char* attribute,TiXmlElement* element,float &f1,float &f2,float &f3,float &f4);
 	void processGlobals(TiXmlElement* globalsElement);
+	void processAnimations(TiXmlElement* animationElement);
 	void loadFile();
 	void drawObjects();
 	void auxDrawObjects(vector<string> sonIds,pair<string,Appearance*> fatherAppearance);
@@ -64,6 +67,7 @@ private:
 	vector<Light*> sceneLights;
 	vector<pair<char*,CGFcamera*> > sceneCameras;
 	map<string,Texture*> Textures;
+	map<string,Animation*> Animations;
 	map<string,CGFtexture*> sceneTextures;
 	map<string,Appearance*> appearances;
 	Graph* sceneGraph;

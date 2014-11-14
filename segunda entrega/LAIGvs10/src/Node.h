@@ -3,6 +3,7 @@
 #include "Appearance.h"
 #include "Transformation.h"
 #include "SceneObject.h"
+#include "Animation.h"
 #include <iostream>
 class Node
 {
@@ -14,6 +15,7 @@ class Node
 	float textT,textS;
 	bool DisplayList;
 	GLuint displayListId;
+	Animation* animation;
 public:
 	Node(string id, bool displaylist=false);
 	Node(void);
@@ -39,6 +41,7 @@ public:
 	void setDisplayList(bool displayList);
 	void createDisplayList(GLuint ID);
 	GLuint getDisplayListId();
+	void setAnimation(Animation* animation);
 };
 
 #endif
