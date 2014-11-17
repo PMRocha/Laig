@@ -562,6 +562,11 @@ void XMLScene::processGraph(TiXmlElement* graphElement)
 				node->addObject(patch);
 
 			}
+			else if(primitiveAnalyzer->Attribute("texture") != NULL) {
+				std::string texture;
+				SceneObject* flag = new SceneFlag(texture);
+				node->addObject(flag);
+			}
 
 			primitiveAnalyzer = primitiveAnalyzer->NextSiblingElement();
 		}

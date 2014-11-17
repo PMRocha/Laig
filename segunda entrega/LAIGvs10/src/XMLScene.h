@@ -18,6 +18,7 @@
 #include "Translation.h"
 #include "Scaling.h"
 #include "Rotation.h"
+#include "SceneFlag.h"
 #include "SceneRectangle.h"
 #include "SceneTriangle.h"
 #include "SceneCylinder.h"
