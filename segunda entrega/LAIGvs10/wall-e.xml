@@ -128,7 +128,7 @@
         </appearance>
 
     </appearances>
-
+ 
     <graph rootid="root">
 
         <node id="root">
@@ -139,10 +139,10 @@
 
             </transforms>
          
-            <appearanceref id="ss" />
+            <appearanceref id="s2" />
  
             <primitives>
-              <flag texture="power.png"/>
+              <flag texture="tire.png"/>
              </primitives>
               
              <!-- bloco "descendants" -->
