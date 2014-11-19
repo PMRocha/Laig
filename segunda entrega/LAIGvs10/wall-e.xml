@@ -142,7 +142,7 @@
             <appearanceref id="ss" />
  
             <primitives>
-
+              <flag texture="putyourtexturehere.png"/>
              </primitives>
               
              <!-- bloco "descendants" -->
@@ -152,8 +152,8 @@
                 <noderef id="pescoco" />
                 <noderef id="olhos" />
 				<noderef id="planet" />
-                <noderef id="ceu" /> -->
-				<noderef id="planetest" />
+                <noderef id="ceu" />
+				<noderef id="planetest" /> -->
 
             </descendants>
         </node>
