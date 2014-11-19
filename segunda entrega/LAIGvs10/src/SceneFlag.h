@@ -2,7 +2,8 @@
 #define SCENEFLAG_H
 
 #include <string>
-	
+
+#include "FlagShader.h"
 #include "SceneObject.h"
 #include "ScenePlane.h"
 
@@ -13,6 +14,7 @@ public:
 	void draw();
 private:
 	ScenePlane plane;
+	FlagShader shader;
 };
 
 #endif

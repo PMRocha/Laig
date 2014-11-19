@@ -304,10 +304,10 @@
     <None Include="src\vase.png">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="src\flag.frag">
+    <None Include="flag.frag">
       <Filter>Source Files</Filter>
     </None>
-    <None Include="src\flag.vert">
+    <None Include="flag.vert">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>
