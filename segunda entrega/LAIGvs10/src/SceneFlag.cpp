@@ -14,10 +14,13 @@ SceneFlag::SceneFlag(std::string texture) :
 }
 
 void SceneFlag::draw() {
-
+	glPushMatrix();
+	glScalef(10.0f, 1.0f, 10.0f);
 	shader.bind();
 
 	plane.draw();
 
 	shader.unbind();
+
+	glPopMatrix();
 }
