@@ -3,6 +3,7 @@
 
 #include <string>
 #include "SceneObject.h"
+#include "ScenePlane.h"
 
 class SceneFlag : public SceneObject {
 public:
@@ -10,7 +11,7 @@ public:
 	SceneFlag(std::string texture);
 	void draw();
 private:
-
+	ScenePlane plane;
 };
 
 #endif

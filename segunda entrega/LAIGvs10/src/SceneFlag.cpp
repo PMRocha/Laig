@@ -1,18 +1,17 @@
 #include "SceneFlag.h"
 
-SceneFlag::SceneFlag() {
+SceneFlag::SceneFlag() :
+	plane(0)
+{
 
 }
 
-SceneFlag::SceneFlag(std::string texture) {
+SceneFlag::SceneFlag(std::string texture) :
+	plane(0)
+{
 	/*apply texture? idk... */
 }
 
 void SceneFlag::draw() {
-	glBegin(GL_POLYGON);
-		glVertex3f(0.0f, 0.0f, 0.0f);
-		glVertex3f(0.0f, 0.0f, 3.0f);
-		glVertex3f(3.0f, 0.0f, 3.0f);
-		glVertex3f(3.0f, 0.0f, 0.0f);
-	glEnd();
+	plane.draw();
 }
