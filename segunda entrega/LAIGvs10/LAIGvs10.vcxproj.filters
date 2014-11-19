@@ -298,5 +298,11 @@
     <None Include="src\vase.png">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="src\flag.frag">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="src\flag.vert">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

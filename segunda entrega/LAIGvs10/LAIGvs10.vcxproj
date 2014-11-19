@@ -152,6 +152,8 @@
   <ItemGroup>
     <None Include="src\bloodyPrints.jpg" />
     <None Include="src\bloodyWall.jpg" />
+    <None Include="src\flag.frag" />
+    <None Include="src\flag.vert" />
     <None Include="src\lamp.png" />
     <None Include="src\pine.jpg" />
     <None Include="src\pine.png" />
