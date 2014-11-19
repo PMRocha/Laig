@@ -67,6 +67,7 @@
     <ClCompile Include="src\Animation.cpp" />
     <ClCompile Include="src\Appearance.cpp" />
     <ClCompile Include="src\Camera.cpp" />
+    <ClCompile Include="src\FlagShader.cpp" />
     <ClCompile Include="src\Globals.cpp" />
     <ClCompile Include="src\Graph.cpp" />
     <ClCompile Include="src\Light.cpp" />
@@ -123,6 +124,7 @@
     <ClInclude Include="src\Animation.h" />
     <ClInclude Include="src\Appearance.h" />
     <ClInclude Include="src\Camera.h" />
+    <ClInclude Include="src\FlagShader.h" />
     <ClInclude Include="src\Globals.h" />
     <ClInclude Include="src\Graph.h" />
     <ClInclude Include="src\Light.h" />

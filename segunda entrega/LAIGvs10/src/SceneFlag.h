@@ -2,6 +2,7 @@
 #define SCENEFLAG_H
 
 #include <string>
+	
 #include "SceneObject.h"
 #include "ScenePlane.h"
 
