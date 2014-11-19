@@ -15,6 +15,8 @@ public:
 	void unbind();
 private:
 	CGFtexture texture;
+
+	int imageLoc;
 };
 
 #endif

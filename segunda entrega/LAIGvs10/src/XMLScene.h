@@ -18,7 +18,6 @@
 #include "Translation.h"
 #include "Scaling.h"
 #include "Rotation.h"
-#include "SceneFlag.h"
 #include "SceneRectangle.h"
 #include "SceneTriangle.h"
 #include "SceneCylinder.h"
@@ -29,6 +28,7 @@
 #include "ScenePatch.h"
 #include "Appearance.h"
 #include "Texture.h"
+#include "SceneFlag.h"
 
 
 class XMLScene : public CGFscene

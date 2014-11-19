@@ -142,7 +142,7 @@
             <appearanceref id="ss" />
  
             <primitives>
-              <flag texture="putyourtexturehere.png"/>
+              <flag texture="power.png"/>
              </primitives>
               
              <!-- bloco "descendants" -->
