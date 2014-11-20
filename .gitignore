@@ -1,9 +1,10 @@
 #Packages
 #####
 *.zip
+*.txt
 
 #VS project related files
-*/ipch
+*/ipch/
 *.ilk
 *.pdb
 *.db
@@ -11,4 +12,4 @@
 *.sln
 *.suo
 *.opensdf
-*/Debug
+*/Debug/
