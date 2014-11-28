@@ -20,7 +20,6 @@ SceneRectangle::SceneRectangle(float xi,float yi, float xf, float yf)
 
 void SceneRectangle::draw()
 {
-
 	glBegin(GL_QUADS);
 	{
 		glTexCoord2f(0,0);

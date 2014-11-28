@@ -75,7 +75,9 @@
     <ClCompile Include="src\Node.cpp" />
     <ClCompile Include="src\OrthoCamera.cpp" />
     <ClCompile Include="src\PerspectiveCamera.cpp" />
+    <ClCompile Include="src\SceneBlock.cpp" />
     <ClCompile Include="src\SceneFlag.cpp" />
+    <ClCompile Include="src\SceneHexagon.cpp" />
     <ClCompile Include="src\ScenePatch.cpp" />
     <ClCompile Include="src\ScenePlane.cpp" />
     <ClCompile Include="src\Rotation.cpp" />
@@ -131,7 +133,9 @@
     <ClInclude Include="src\Node.h" />
     <ClInclude Include="src\OrthoCamera.h" />
     <ClInclude Include="src\PerspectiveCamera.h" />
+    <ClInclude Include="src\SceneBlock.h" />
     <ClInclude Include="src\SceneFlag.h" />
+    <ClInclude Include="src\SceneHexagon.h" />
     <ClInclude Include="src\ScenePatch.h" />
     <ClInclude Include="src\ScenePlane.h" />
     <ClInclude Include="src\Point.h" />

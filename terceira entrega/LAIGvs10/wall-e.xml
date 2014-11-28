@@ -49,7 +49,7 @@
                <component type="specular" value="0.2 0.2 0.2 1" />
             </light>-->
 
-            <light id="1" type="spot" enabled="true" marker="true" pos="5 0 0" target="0 1 0" 
+            <light id="1" type="spot" enabled="true" marker="true" pos="5 5 0" target="0 1 0" 
                 angle="50" exponent="10" >
                 <component type="ambient" value="0.2 0.2 0.2 1" />
                 <component type="diffuse" value="1 1 1 1" />
@@ -57,7 +57,7 @@
 
             </light>  
 
-            <light id="2" type="omni" enabled="true" marker="true" pos="-5 0 0" >
+            <light id="2" type="omni" enabled="true" marker="true" pos="-5 5 0" >
                <component type="ambient" value="1 1 1 1" />
                <component type="diffuse" value="1 1 1 1" />
                <component type="specular" value="1 1 1 1" />
@@ -142,7 +142,7 @@
             <appearanceref id="s2" />
  
             <primitives>
-              <flag texture="tire.png"/>
+              <rectangle xy1="-1 1" xy2="1 -1" />
              </primitives>
               
              <!-- bloco "descendants" -->

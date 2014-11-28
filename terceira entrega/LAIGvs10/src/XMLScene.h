@@ -26,6 +26,8 @@
 #include "SceneObject.h"
 #include "ScenePlane.h"
 #include "ScenePatch.h"
+#include "SceneHexagon.h"
+#include "SceneBlock.h"
 #include "Appearance.h"
 #include "Texture.h"
 #include "SceneFlag.h"
