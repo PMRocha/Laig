@@ -165,7 +165,7 @@ void XMLScene::display()
 	glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	axis.draw();
+
 	activeCamera->applyView();
 
 	for(unsigned int i=0;i<sceneLights.size();i++)
@@ -182,7 +182,6 @@ void XMLScene::display()
 		sceneLights[i]->update();
 	}
 
-	axis.draw();
 	selectDrawMode();
 	drawObjects();
 	glutSwapBuffers();

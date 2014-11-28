@@ -10,6 +10,9 @@ SceneBlock::SceneBlock():rec1(3)
 
 void SceneBlock::draw(void)
 {
+
+	glRotatef(30.0f,0.0f,1.0f,0.0f);
+
 	//bases
 	glPushMatrix();
 	glRotatef(90.0f,1.0f,0.0f,0.0f);
