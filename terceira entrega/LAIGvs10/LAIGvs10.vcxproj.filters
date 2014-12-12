@@ -108,9 +108,6 @@
     <ClCompile Include="src\FlagShader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\SceneHexagon.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\SceneBlock.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -273,9 +270,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\FlagShader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\SceneHexagon.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\SceneBlock.h">
