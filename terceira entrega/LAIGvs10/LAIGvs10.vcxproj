@@ -79,6 +79,7 @@
     <ClCompile Include="src\SceneBoard.cpp" />
     <ClCompile Include="src\SceneFlag.cpp" />
     <ClCompile Include="src\ScenePatch.cpp" />
+    <ClCompile Include="src\ScenePiece.cpp" />
     <ClCompile Include="src\ScenePlane.cpp" />
     <ClCompile Include="src\Rotation.cpp" />
     <ClCompile Include="src\Scaling.cpp" />
@@ -137,6 +138,7 @@
     <ClInclude Include="src\SceneBoard.h" />
     <ClInclude Include="src\SceneFlag.h" />
     <ClInclude Include="src\ScenePatch.h" />
+    <ClInclude Include="src\ScenePiece.h" />
     <ClInclude Include="src\ScenePlane.h" />
     <ClInclude Include="src\Point.h" />
     <ClInclude Include="src\Rotation.h" />
