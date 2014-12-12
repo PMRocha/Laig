@@ -1,7 +1,6 @@
 #ifndef _SCENEBLOCK_H_
 #define _SCENEBLOCK_H_
 #include "SceneObject.h"
-#include "SceneHexagon.h"
 #include "ScenePlane.h"
 using namespace std;
 

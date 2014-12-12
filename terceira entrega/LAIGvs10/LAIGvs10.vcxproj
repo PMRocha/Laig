@@ -76,6 +76,7 @@
     <ClCompile Include="src\OrthoCamera.cpp" />
     <ClCompile Include="src\PerspectiveCamera.cpp" />
     <ClCompile Include="src\SceneBlock.cpp" />
+    <ClCompile Include="src\SceneBoard.cpp" />
     <ClCompile Include="src\SceneFlag.cpp" />
     <ClCompile Include="src\ScenePatch.cpp" />
     <ClCompile Include="src\ScenePlane.cpp" />
@@ -133,6 +134,7 @@
     <ClInclude Include="src\OrthoCamera.h" />
     <ClInclude Include="src\PerspectiveCamera.h" />
     <ClInclude Include="src\SceneBlock.h" />
+    <ClInclude Include="src\SceneBoard.h" />
     <ClInclude Include="src\SceneFlag.h" />
     <ClInclude Include="src\ScenePatch.h" />
     <ClInclude Include="src\ScenePlane.h" />
