@@ -28,6 +28,7 @@
 #include "ScenePatch.h"
 #include "SceneBlock.h"
 #include "SceneBoard.h"
+#include "ScenePiece.h"
 #include "Appearance.h"
 #include "Texture.h"
 #include "SceneFlag.h"

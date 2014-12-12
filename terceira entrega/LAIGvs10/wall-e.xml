@@ -84,7 +84,7 @@
     <!-- bloco de texturas. Este bloco tem de existir mas pode estar vazio, se nao forem usadas texturas -->
     <!--   ver topico 'Notas finais' no enunciado sobre os parametros texlength_... -->
     <textures>      
-        <texture id="ss" file="helipad.png" texlength_s="2" texlength_t="2" />
+        <texture id="ss" file="black.jpg" texlength_s="2" texlength_t="2" />
 		<texture id="greyMetal" file="metaleyes.jpg" texlength_s="2" texlength_t="2" />
 		<texture id="eyeGlobe" file="eye.jpg" texlength_s="1" texlength_t="1" />
 		<texture id="tire" file="tire.png" texlength_s="0.6" texlength_t="2.5" />

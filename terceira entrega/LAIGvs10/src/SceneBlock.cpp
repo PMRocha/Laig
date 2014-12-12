@@ -2,7 +2,7 @@
 
 #define PI acos(-1.0)
 
-SceneBlock::SceneBlock():rec1(3)
+SceneBlock::SceneBlock():rec1(10)
 {
 
 }

@@ -8,9 +8,10 @@ using namespace std;
 class ScenePiece:public SceneObject
 {
 private:
-	SceneBlock block;
+	SceneCylinder piece;
+	Point coords;
 public:
-	ScenePiece();
+	ScenePiece(double x, double y, double z);
 	~ScenePiece(void);
 	void draw(void);
 };

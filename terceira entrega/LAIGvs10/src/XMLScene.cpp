@@ -473,7 +473,9 @@ void XMLScene::processGraph(TiXmlElement* graphElement)
 				read2Float("xy1",primitiveAnalyzer,xy1[0],xy1[1]);
 				read2Float("xy2",primitiveAnalyzer,xy2[0],xy2[1]);
 				SceneObject* rectangle = new SceneBoard();
+				SceneObject* rectanglo = new ScenePiece(0,0,0);
 				node->addObject(rectangle);
+				node->addObject(rectanglo);
 			}
 
 			else if(primitiveAnalyzer->Attribute("xyz1")!=NULL)
