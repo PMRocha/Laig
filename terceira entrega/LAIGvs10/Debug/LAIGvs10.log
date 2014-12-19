@@ -1,9 +1,17 @@
-﻿Build started 12/19/2014 3:00:47 PM.
-     1>Project "C:\Users\Pedro\Desktop\Pedro\Laig\terceira entrega\LAIGvs10\LAIGvs10.vcxproj" on node 2 (Build target(s)).
-     1>Link:
+﻿Build started 12/12/2014 5:13:41 PM.
+     1>Project "C:\Users\Pedro\Desktop\Pedro\Laig\terceira entrega\LAIGvs10\LAIGvs10.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\LAIGvs10.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
          LAIGvs10.vcxproj -> C:\Users\Pedro\Desktop\Pedro\Laig\terceira entrega\LAIGvs10\Debug\LAIGvs10.exe
-     1>Done Building Project "C:\Users\Pedro\Desktop\Pedro\Laig\terceira entrega\LAIGvs10\LAIGvs10.vcxproj" (Build target(s)).
+       FinalizeBuildStatus:
+         Deleting file "Debug\LAIGvs10.unsuccessfulbuild".
+         Touching "Debug\LAIGvs10.lastbuildstate".
+     1>Done Building Project "C:\Users\Pedro\Desktop\Pedro\Laig\terceira entrega\LAIGvs10\LAIGvs10.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.41
+Time Elapsed 00:00:00.10
