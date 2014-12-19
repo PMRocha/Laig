@@ -138,6 +138,7 @@ void XMLScene::auxDrawObjects(vector<string> sonIds,pair<string,Appearance*> fat
 
 				for (unsigned int j=0;j<objects.size();j++)
 				{
+					
 					objects[j]->draw();
 				}
 
