@@ -75,6 +75,7 @@
     <ClCompile Include="src\Node.cpp" />
     <ClCompile Include="src\OrthoCamera.cpp" />
     <ClCompile Include="src\PerspectiveCamera.cpp" />
+    <ClCompile Include="src\PickingInterface.cpp" />
     <ClCompile Include="src\SceneBlock.cpp" />
     <ClCompile Include="src\SceneBoard.cpp" />
     <ClCompile Include="src\SceneFlag.cpp" />
@@ -134,6 +135,7 @@
     <ClInclude Include="src\Node.h" />
     <ClInclude Include="src\OrthoCamera.h" />
     <ClInclude Include="src\PerspectiveCamera.h" />
+    <ClInclude Include="src\PickingInterface.h" />
     <ClInclude Include="src\SceneBlock.h" />
     <ClInclude Include="src\SceneBoard.h" />
     <ClInclude Include="src\SceneFlag.h" />
