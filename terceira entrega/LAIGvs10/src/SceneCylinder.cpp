@@ -85,8 +85,7 @@ void SceneCylinder::draw(void)
 			
 			nextP=j+1;
 
-			
-				nextC=i+1;
+			nextC=i+1;
 
 			glTexCoord2f(texts[i][j].x,texts[i][j].y);
 			glNormal3f(normals[i][j].x,normals[i][j].y,normals[i][j].z);
