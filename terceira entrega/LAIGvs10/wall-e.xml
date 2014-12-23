@@ -316,7 +316,7 @@
             </transforms>
             <appearanceref id="s2" />
             <primitives>
-                <rectangle xy1="-1 -1" xy2="1 1" />
+                <!-- <rectangle xy1="-1 -1" xy2="1 1" /> -->
             </primitives>
 
             <descendants>
@@ -458,7 +458,7 @@
             </transforms>
             <appearanceref id="tire" />
             <primitives>
-                <rectangle xy1="-0.3 -2.236067977" xy2="0.3 0" />
+                <!--<rectangle xy1="-0.3 -2.236067977" xy2="0.3 0" /> -->
             </primitives>
 
             <descendants>
@@ -473,7 +473,7 @@
             </transforms>
             <appearanceref id="tire" />
             <primitives>
-                <rectangle xy1="-0.3 -2.236067977" xy2="0.3 0" />
+                <!--<rectangle xy1="-0.3 -2.236067977" xy2="0.3 0" /> -->
             </primitives>
 
             <descendants>
@@ -488,7 +488,7 @@
             </transforms>
             <appearanceref id="tire" />
             <primitives>
-                <rectangle xy1="-0.3 -1" xy2="0.3 1" />
+                <!--<rectangle xy1="-0.3 -1" xy2="0.3 1" /> -->
             </primitives>
 
             <descendants>
@@ -787,7 +787,7 @@
             </transforms>
             <appearanceref id="inherit" />
             <primitives>
-                <rectangle xy1="-0.5 -0.5" xy2="0.5 0.5" />
+                <!-- <rectangle xy1="-0.5 -0.5" xy2="0.5 0.5" /> -->
             </primitives>
 
             <descendants>
