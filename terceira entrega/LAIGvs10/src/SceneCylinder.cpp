@@ -56,7 +56,7 @@ void SceneCylinder::draw(void)
 	{
 	
 		glTexCoord2f(0.5 + cos(i*angle)/2.0,0.5 + sin(i*angle)/2.0);
-		glNormal3f( 0,0,1);
+		glNormal3f( 0,0,-1);
 		glVertex3f( points[0][i].x,points[0][i].y,points[0][i].z);
 	
 	}  
@@ -68,7 +68,7 @@ void SceneCylinder::draw(void)
 	for (unsigned int i =  0; i <points[points.size()-1].size();i++)
 	{
 		glTexCoord2f(0.5 + cos(i*angle)/2.0,0.5 + sin(i*angle)/2.0);
-		glNormal3f( 0,0,-1);
+		glNormal3f( 0,0,1);
 		glVertex3f( points[points.size()-1][i].x,points[points.size()-1][i].y,points[points.size()-1][i].z);
 	} 
 	glEnd();
