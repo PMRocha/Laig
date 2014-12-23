@@ -10,9 +10,9 @@ int main (int argc, char* argv[])
 	CGFapplication app = CGFapplication();
 	 XMLScene* xml;
 	if(argc==2)
-    xml = new XMLScene(argv[1]);
+		xml = new XMLScene(argv[1]);
 	else
-	xml = new XMLScene("wall-e.xml");
+		xml = new XMLScene("wall-e.xml");
 	try {
 		app.init(&argc, argv);
 		 

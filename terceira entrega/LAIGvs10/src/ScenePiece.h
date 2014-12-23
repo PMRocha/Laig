@@ -14,6 +14,8 @@ public:
 	ScenePiece(double x, double y, double z);
 	~ScenePiece(void);
 	void draw(void);
+
+	void move(float deltaTime);
 };
 
 #endif

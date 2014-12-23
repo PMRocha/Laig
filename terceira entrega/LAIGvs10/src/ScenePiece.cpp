@@ -26,3 +26,8 @@ void ScenePiece::draw(void)
 ScenePiece::~ScenePiece(void)
 {
 }
+
+void ScenePiece::move(float deltaTime) {
+	coords.x += 1 * deltaTime;
+	std::cout << deltaTime << std::endl;
+}

@@ -37,6 +37,7 @@
 class XMLScene : public CGFscene
 {
 public:
+	ScenePiece piece;
 	XMLScene(char *filename);
 	~XMLScene();
 	void init();
@@ -44,6 +45,7 @@ public:
 	void defineGlobalVariables();
 
 	void display();
+	void update(unsigned long millis);
 	static TiXmlElement *findChildByAttribute(TiXmlElement *parent,const char * attr, const char *val);
 	void processCameras(TiXmlElement* camerasElement);
 	void processLights(TiXmlElement* lightsElement);
@@ -81,5 +83,11 @@ private:
 	int drawmode;
 	int camera;
 	float* view_rotate;
+
+	//time related vars
+	unsigned long lastTime;
+	unsigned long thisTime;
+	unsigned long deltaTime;
+	float dtseconds;
 };
 #endif

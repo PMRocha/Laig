@@ -1,13 +1,16 @@
 #include "XMLScene.h"
 
 
-XMLScene::XMLScene(char *filename)
+XMLScene::XMLScene(char *filename) :
+	piece(2.0, 2.0, 2.0)
 {
 
 	// Read XML from file
 	this->filename=filename;
 	drawmode=0;
 
+	lastTime = 0;
+	thisTime = 0;
 }
 
 void XMLScene::init()
@@ -17,6 +20,7 @@ void XMLScene::init()
 	glMatrixMode(GL_MODELVIEW);
 	//calcs tranformations on primitives
 	sceneGraph->calcPrimitives();
+	setUpdatePeriod(33);
 }
 
 void XMLScene::drawObjects()
@@ -31,6 +35,7 @@ void XMLScene::drawObjects()
 
 	auxDrawObjectsRoot();
 	glPopMatrix();
+	piece.draw();
 }
 
 void XMLScene::auxDrawObjectsRoot()
@@ -476,7 +481,7 @@ void XMLScene::processGraph(TiXmlElement* graphElement)
 				SceneObject* rectangle = new SceneBoard();
 				SceneObject* rectanglo = new ScenePiece(0,0,0);
 				node->addObject(rectangle);
-				node->addObject(rectanglo);
+				//node->addObject(rectanglo);
 			}
 
 			else if(primitiveAnalyzer->Attribute("xyz1")!=NULL)
@@ -783,4 +788,21 @@ void XMLScene::processAnimations(TiXmlElement* animationElement){
 			element=element->NextSiblingElement();
 		}
 	}
+}
+
+void XMLScene::update(unsigned long millis) {
+	//get deltaTime
+	if(lastTime == 0)
+		lastTime = millis;
+	else
+		lastTime = thisTime;
+
+	thisTime = millis;
+	deltaTime = thisTime - lastTime;
+	dtseconds = deltaTime / 1000.0f;
+
+	std::cout << lastTime << " " << thisTime << " " << deltaTime << " " << dtseconds << std::endl;
+
+	//test update
+	piece.move(dtseconds);
 }
