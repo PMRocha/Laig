@@ -803,6 +803,8 @@ void XMLScene::update(unsigned long millis) {
 
 	std::cout << lastTime << " " << thisTime << " " << deltaTime << " " << dtseconds << std::endl;
 
+	//place socket comms here
+
 	//place animation related ops here, put them in a single function, I don't give a **** (I actually do, let's use single functions please (long-winded comments are what I do when I'm trying to work but can't (I decided it's a thing, now)))
 	piece.move(dtseconds);
 }
