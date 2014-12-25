@@ -21,13 +21,11 @@ void ScenePiece::draw(void)
 	glPopMatrix();
 }
 
-
-
 ScenePiece::~ScenePiece(void)
 {
 }
 
 void ScenePiece::move(float deltaTime) {
-	coords.x += 1 * deltaTime;
+	coords.x += 10 * deltaTime;
 	std::cout << deltaTime << std::endl;
 }
