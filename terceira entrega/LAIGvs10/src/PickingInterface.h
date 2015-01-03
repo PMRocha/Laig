@@ -1,9 +1,9 @@
-#ifndef PickInterface_H
-#define PickInterface_H
+#ifndef PickingInterface_H
+#define PickingInterface_H
 
 #include "CGFinterface.h"
 
-class PickInterface: public CGFinterface {
+class PickingInterface: public CGFinterface {
 	public:
 		virtual void processMouse(int button, int state, int x, int y);	
 		void performPicking(int x, int y);

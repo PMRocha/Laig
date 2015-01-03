@@ -5,8 +5,9 @@
 // buffer to be used to store the hits during picking
 #define BUFSIZE 256
 GLuint selectBuf[BUFSIZE];
+int test[2], picked[2];
 
-void PickInterface::processMouse(int button, int state, int x, int y) 
+void PickingInterface::processMouse(int button, int state, int x, int y) 
 {
 	CGFinterface::processMouse(button,state, x, y);
 
@@ -14,9 +15,29 @@ void PickInterface::processMouse(int button, int state, int x, int y)
 	// this could be more elaborate, e.g. only performing picking when there is a click (DOWN followed by UP) on the same place
 	if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN)
 		performPicking(x,y);
+	if (button == GLUT_LEFT_BUTTON && state == GLUT_UP){
+		performPicking(x,y);
+		if(test[0] == picked[0] && test[1] == picked[1]){
+			printf("Picked ID's: ");
+			cout << test[0] << " " << picked[0] << " " << test[1] << " " << picked[1] << " ";
+			printf("\n");
+			test[0] = NULL;
+			test[1] = NULL;
+			picked[0] = NULL;
+			picked[1] = NULL;
+		}
+		else {
+			test[0] = NULL;
+			test[1] = NULL;
+			picked[0] = NULL;
+			picked[1] = NULL;
+
+		}
+
+	}
 }
 
-void PickInterface::performPicking(int x, int y) 
+void PickingInterface::performPicking(int x, int y) 
 {
 	// Sets the buffer to be used for selection and activate selection mode
 	glSelectBuffer (BUFSIZE, selectBuf);
@@ -66,7 +87,7 @@ void PickInterface::performPicking(int x, int y)
 	processHits(hits, selectBuf);
 }
 
-void PickInterface::processHits (GLint hits, GLuint buffer[]) 
+void PickingInterface::processHits (GLint hits, GLuint buffer[]) 
 {
 	GLuint *ptr = buffer;
 	GLuint mindepth = 0xFFFFFFFF;
@@ -92,11 +113,14 @@ void PickInterface::processHits (GLint hits, GLuint buffer[])
 	{
 		// this should be replaced by code handling the picked object's ID's (stored in "selected"), 
 		// possibly invoking a method on the scene class and passing "selected" and "nselected"
-		printf("Picked ID's: ");
+		
 		for (int i=0; i<nselected; i++)
-			printf("%d ",selected[i]);
-		printf("\n");
+			if(test[i]==NULL){
+				test[i] = selected[i];
+			}
+			else{
+				picked[i] = selected[i];
+			}
+		
 	}
-	else
-		printf("Nothing selected while picking \n");	
 }

@@ -20,7 +20,7 @@ void XMLScene::init()
 	glMatrixMode(GL_MODELVIEW);
 	//calcs tranformations on primitives
 	sceneGraph->calcPrimitives();
-	setUpdatePeriod(33);
+	//setUpdatePeriod(33);
 }
 
 void XMLScene::drawObjects()

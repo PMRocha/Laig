@@ -14,6 +14,9 @@ ScenePiece::ScenePiece(double x, double y, double z):piece(1,1,0.5,20,20)
 void ScenePiece::draw(void)
 {
 	glPushMatrix();
+	glPushName(-1);	
+	glLoadName(4);
+	glPushName(5);
 	glScalef(0.5,1,0.5);
 	glRotatef(-90,1,0,0);
 	glTranslatef(coords.x,coords.y, coords.z);

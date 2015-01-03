@@ -1,12 +1,13 @@
-﻿Build started 12/25/2014 6:34:43 PM.
-     1>Project "C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\LAIGvs10.vcxproj" on node 2 (build target(s)).
+﻿Build started 03/01/2015 20:02:49.
+     1>Project "C:\Users\Pedro\Documents\GitHub\Laig\terceira entrega\LAIGvs10\LAIGvs10.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\LAIGvs10.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt src\ScenePiece.cpp
-         ScenePiece.cpp
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt src\PickingInterface.cpp
+         PickingInterface.cpp
+     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\pickinginterface.cpp(119): warning C4018: '<' : signed/unsigned mismatch
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\LAIGvs10.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib lib\TinyXML.lib lib\glew32.lib lib\glew32mx.lib lib\glew32mxs.lib lib\glew32s.lib lib\glui32.lib lib\glui32d.lib lib\glut32.lib lib\CGFlib.lib /MANIFEST /ManifestFile:"Debug\LAIGvs10.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\LAIGvs10.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\LAIGvs10.lib" /MACHINE:X86 Debug\Animation.obj
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Pedro\Documents\GitHub\Laig\terceira entrega\LAIGvs10\Debug\LAIGvs10.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib lib\TinyXML.lib lib\glew32.lib lib\glew32mx.lib lib\glew32mxs.lib lib\glew32s.lib lib\glui32.lib lib\glui32d.lib lib\glut32.lib lib\CGFlib.lib /MANIFEST /ManifestFile:"Debug\LAIGvs10.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Pedro\Documents\GitHub\Laig\terceira entrega\LAIGvs10\Debug\LAIGvs10.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Pedro\Documents\GitHub\Laig\terceira entrega\LAIGvs10\Debug\LAIGvs10.lib" /MACHINE:X86 Debug\Animation.obj
          Debug\Appearance.obj
          Debug\Camera.obj
          Debug\FlagShader.obj
@@ -41,27 +42,27 @@
          Debug\Transformation.obj
          Debug\Translation.obj
          Debug\XMLScene.obj
-         LINK : C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\LAIGvs10.exe not found or not built by the last incremental link; performing full link
-     1>CGFlib.lib(CGFappearance.obj) : warning LNK4204: 'C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
-     1>CGFlib.lib(CGFapplication.obj) : warning LNK4204: 'C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
-     1>CGFlib.lib(CGFaxis.obj) : warning LNK4204: 'C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
-     1>CGFlib.lib(CGFcamera.obj) : warning LNK4204: 'C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
-     1>CGFlib.lib(CGFinterface.obj) : warning LNK4204: 'C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
-     1>CGFlib.lib(CGFlight.obj) : warning LNK4204: 'C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
-     1>CGFlib.lib(CGFobject.obj) : warning LNK4204: 'C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
-     1>CGFlib.lib(CGFscene.obj) : warning LNK4204: 'C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
-     1>CGFlib.lib(CGFshader.obj) : warning LNK4204: 'C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
-     1>CGFlib.lib(CGFtexture.obj) : warning LNK4204: 'C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
-     1>CGFlib.lib(imagetools.obj) : warning LNK4204: 'C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
-     1>CGFlib.lib(stb_image.obj) : warning LNK4204: 'C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
-         LAIGvs10.vcxproj -> C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\LAIGvs10.exe
+         LINK : C:\Users\Pedro\Documents\GitHub\Laig\terceira entrega\LAIGvs10\Debug\LAIGvs10.exe not found or not built by the last incremental link; performing full link
+     1>CGFlib.lib(CGFappearance.obj) : warning LNK4204: 'C:\Users\Pedro\Documents\GitHub\Laig\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>CGFlib.lib(CGFapplication.obj) : warning LNK4204: 'C:\Users\Pedro\Documents\GitHub\Laig\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>CGFlib.lib(CGFaxis.obj) : warning LNK4204: 'C:\Users\Pedro\Documents\GitHub\Laig\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>CGFlib.lib(CGFcamera.obj) : warning LNK4204: 'C:\Users\Pedro\Documents\GitHub\Laig\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>CGFlib.lib(CGFinterface.obj) : warning LNK4204: 'C:\Users\Pedro\Documents\GitHub\Laig\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>CGFlib.lib(CGFlight.obj) : warning LNK4204: 'C:\Users\Pedro\Documents\GitHub\Laig\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>CGFlib.lib(CGFobject.obj) : warning LNK4204: 'C:\Users\Pedro\Documents\GitHub\Laig\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>CGFlib.lib(CGFscene.obj) : warning LNK4204: 'C:\Users\Pedro\Documents\GitHub\Laig\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>CGFlib.lib(CGFshader.obj) : warning LNK4204: 'C:\Users\Pedro\Documents\GitHub\Laig\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>CGFlib.lib(CGFtexture.obj) : warning LNK4204: 'C:\Users\Pedro\Documents\GitHub\Laig\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>CGFlib.lib(imagetools.obj) : warning LNK4204: 'C:\Users\Pedro\Documents\GitHub\Laig\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>CGFlib.lib(stb_image.obj) : warning LNK4204: 'C:\Users\Pedro\Documents\GitHub\Laig\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+         LAIGvs10.vcxproj -> C:\Users\Pedro\Documents\GitHub\Laig\terceira entrega\LAIGvs10\Debug\LAIGvs10.exe
        Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\LAIGvs10.exe;#1" /manifest Debug\LAIGvs10.exe.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Pedro\Documents\GitHub\Laig\terceira entrega\LAIGvs10\Debug\LAIGvs10.exe;#1" /manifest Debug\LAIGvs10.exe.intermediate.manifest
        FinalizeBuildStatus:
          Deleting file "Debug\LAIGvs10.unsuccessfulbuild".
          Touching "Debug\LAIGvs10.lastbuildstate".
-     1>Done Building Project "C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\LAIGvs10.vcxproj" (build target(s)).
+     1>Done Building Project "C:\Users\Pedro\Documents\GitHub\Laig\terceira entrega\LAIGvs10\LAIGvs10.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:12.86
+Time Elapsed 00:00:00.98

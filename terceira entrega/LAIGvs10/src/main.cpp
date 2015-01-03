@@ -3,6 +3,8 @@
 #include <string>
 #include "XMLScene.h"
 #include "TPinterface.h"
+#include "PickingInterface.h"
+
 using namespace std;
 
 int main (int argc, char* argv[])
@@ -18,6 +20,7 @@ int main (int argc, char* argv[])
 		 
 		app.setScene(xml);
 		app.setInterface(new TPinterface());
+		app.setInterface(new PickingInterface());
 		app.run();
 	}
 	catch(GLexception& ex) {
