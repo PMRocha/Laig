@@ -12,12 +12,14 @@ private:
 	SceneCylinder piece;
 	Point coords;
 	char color;
+	int row, column;
 public:
 	ScenePiece(double x, double y, double z);
 	~ScenePiece(void);
 	void draw(void);
 	void setColor(char type);
 	void move(float deltaTime);
+	void setName(int row, int column);
 };
 
 #endif
