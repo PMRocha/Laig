@@ -29,6 +29,11 @@ void ScenePiece::draw(void)
 	glScalef(0.5,1,0.5);
 	glRotatef(-90,1,0,0);
 	glTranslatef(coords.x,coords.y, coords.z);
+	glTranslatef(0.0f, 0.0f, (1.5*row));
+	if(column <= 4)
+		glTranslatef(-(sin(PI/3.0)*column), 0.0f,0.0f);
+	else
+		glTranslatef(-(sin(PI/3.0)*(8-column)), 0.0f,0.0f);
 	piece.draw();
 	glPopMatrix();
 }
