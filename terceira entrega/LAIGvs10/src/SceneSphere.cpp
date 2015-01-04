@@ -22,9 +22,10 @@ void SceneSphere::draw(void)
 void SceneSphere::draw(string tex)
 {
 	CGFtexture texture = CGFtexture("sky.jpg");
-	texture.apply();
+	
 	GLUquadric *quad= gluNewQuadric();
 	gluQuadricTexture(quad,GL_TRUE);
+	texture.apply();
 	gluQuadricOrientation(quad,GLU_OUTSIDE);
 	gluSphere(quad,radius,slices,stacks);
 }
