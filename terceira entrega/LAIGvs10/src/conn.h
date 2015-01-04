@@ -7,8 +7,11 @@
 #define IPADDRESS "127.0.0.1"
 #define PORT 60070
 
-SOCKET m_socket;
-
-bool socketConnect();
+class Conn {
+private:
+	SOCKET m_socket;
+public:
+	bool socketConnect();
+};
 
 #endif

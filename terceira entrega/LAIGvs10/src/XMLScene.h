@@ -91,5 +91,7 @@ private:
 	unsigned long thisTime;
 	unsigned long deltaTime;
 	float dtseconds;
+
+	Conn connection;
 };
 #endif

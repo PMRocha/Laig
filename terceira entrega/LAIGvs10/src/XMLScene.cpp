@@ -22,7 +22,7 @@ void XMLScene::init()
 	//setUpdatePeriod(33);
 
 	//initiate connection
-	if(!socketConnect()) {
+	if(!connection.socketConnect()) {
 		std::cout << "Socket connection failed... =(" << std::endl;
 		getchar();
 	}
@@ -240,19 +240,19 @@ void XMLScene::processCameras(TiXmlElement* camerasElement)
 	TiXmlElement* orthoElement = camerasElement->FirstChildElement("ortho");
 	TiXmlElement* perspectiveElement = camerasElement->FirstChildElement("perspective");
 	CGFcamera* cam;
-	float near, far, left, right, top, bottom;
+	float nearF, farF, leftF, rightF, topF, bottomF;
 	unsigned int i = 0;
 	while(orthoElement != NULL)
 	{
-		read1Float("near",orthoElement, near);
-		read1Float("far",orthoElement, far);
-		read1Float("left",orthoElement, left);
-		read1Float("right",orthoElement, right);
-		read1Float("top",orthoElement, top);
-		read1Float("bottom",orthoElement, bottom);
+		read1Float("near",orthoElement, nearF);
+		read1Float("far",orthoElement, farF);
+		read1Float("left",orthoElement, leftF);
+		read1Float("right",orthoElement, rightF);
+		read1Float("top",orthoElement, topF);
+		read1Float("bottom",orthoElement, bottomF);
 		id=(char*)orthoElement->Attribute("id");
 		bool activated=id==rootId;
-		cam = new OrthoCamera(near, far, left, right, top, bottom,activated);
+		cam = new OrthoCamera(nearF, farF, leftF, rightF, topF, bottomF,activated);
 		sceneCameras.push_back(make_pair(id,cam));
 		orthoElement = orthoElement->NextSiblingElement("ortho");
 		if(id==rootId)
@@ -264,14 +264,14 @@ void XMLScene::processCameras(TiXmlElement* camerasElement)
 	while(perspectiveElement != NULL)
 	{
 		float position[3],target[3],angle;
-		read1Float("near",perspectiveElement, near);
-		read1Float("far",perspectiveElement, far);
+		read1Float("near",perspectiveElement, nearF);
+		read1Float("far",perspectiveElement, farF);
 		read1Float("angle",perspectiveElement, angle);
 		read3Float("pos", perspectiveElement, position[0], position[1], position[2]);
 		read3Float("target", perspectiveElement, target[0], target[1], target[2]);
 		id=(char*)perspectiveElement->Attribute("id");
 		bool activated=id==rootId;
-		cam = new PerspectiveCamera(id==rootId,near, far, angle, position[0], position[1],
+		cam = new PerspectiveCamera(id==rootId,nearF, farF, angle, position[0], position[1],
 			position[2], target[0], target[1], target[2]);
 		sceneCameras.push_back(make_pair(id,cam));
 		if(id==rootId)

@@ -47,7 +47,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>%(AdditionalDependencies);ws2_32.lib;lib\TinyXML.lib;lib\glew32.lib;lib\glew32mx.lib;lib\glew32mxs.lib;lib\glew32s.lib;lib\glui32.lib;lib\glui32d.lib;lib\glut32.lib;lib\CGFlib.lib</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies);WS2_32.lib;lib\TinyXML.lib;lib\glew32.lib;lib\glew32mx.lib;lib\glew32mxs.lib;lib\glew32s.lib;lib\glui32.lib;lib\glui32d.lib;lib\glut32.lib;lib\CGFlib.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
