@@ -1,14 +1,10 @@
-﻿Build started 1/4/2015 12:12:39 PM.
+﻿Build started 1/4/2015 12:28:19 PM.
      1>Project "C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\LAIGvs10.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Touching "Debug\LAIGvs10.unsuccessfulbuild".
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt src\PickingInterface.cpp src\TPinterface.cpp src\XMLScene.cpp src\main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt src\XMLScene.cpp
          XMLScene.cpp
-     1>c:\users\zephiro309\desktop\system\feup\ano3\semestre1\laig\repo\terceira entrega\laigvs10\src\orthocamera.h(15): error C2059: syntax error : ','
-     1>c:\users\zephiro309\desktop\system\feup\ano3\semestre1\laig\repo\terceira entrega\laigvs10\src\orthocamera.h(15): error C2238: unexpected token(s) preceding ';'
-     1>c:\users\zephiro309\desktop\system\feup\ano3\semestre1\laig\repo\terceira entrega\laigvs10\src\perspectivecamera.h(15): error C2059: syntax error : ','
-     1>c:\users\zephiro309\desktop\system\feup\ano3\semestre1\laig\repo\terceira entrega\laigvs10\src\perspectivecamera.h(15): error C2238: unexpected token(s) preceding ';'
      1>c:\users\zephiro309\desktop\system\feup\ano3\semestre1\laig\repo\terceira entrega\laigvs10\src\xmlscene.cpp(243): warning C4091: '' : ignored on left of 'float' when no variable is declared
      1>c:\users\zephiro309\desktop\system\feup\ano3\semestre1\laig\repo\terceira entrega\laigvs10\src\xmlscene.cpp(243): error C2143: syntax error : missing ';' before ','
      1>c:\users\zephiro309\desktop\system\feup\ano3\semestre1\laig\repo\terceira entrega\laigvs10\src\xmlscene.cpp(243): error C2143: syntax error : missing ';' before ','
@@ -22,31 +18,8 @@
      1>c:\users\zephiro309\desktop\system\feup\ano3\semestre1\laig\repo\terceira entrega\laigvs10\src\xmlscene.cpp(267): error C2059: syntax error : ')'
      1>c:\users\zephiro309\desktop\system\feup\ano3\semestre1\laig\repo\terceira entrega\laigvs10\src\xmlscene.cpp(268): error C2059: syntax error : ')'
      1>c:\users\zephiro309\desktop\system\feup\ano3\semestre1\laig\repo\terceira entrega\laigvs10\src\xmlscene.cpp(274): error C2059: syntax error : ','
-         Generating Code...
-         Compiling...
-         PickingInterface.cpp
-     1>c:\users\zephiro309\desktop\system\feup\ano3\semestre1\laig\repo\terceira entrega\laigvs10\src\orthocamera.h(15): error C2059: syntax error : ','
-     1>c:\users\zephiro309\desktop\system\feup\ano3\semestre1\laig\repo\terceira entrega\laigvs10\src\orthocamera.h(15): error C2238: unexpected token(s) preceding ';'
-     1>c:\users\zephiro309\desktop\system\feup\ano3\semestre1\laig\repo\terceira entrega\laigvs10\src\perspectivecamera.h(15): error C2059: syntax error : ','
-     1>c:\users\zephiro309\desktop\system\feup\ano3\semestre1\laig\repo\terceira entrega\laigvs10\src\perspectivecamera.h(15): error C2238: unexpected token(s) preceding ';'
-     1>c:\users\zephiro309\desktop\system\feup\ano3\semestre1\laig\repo\terceira entrega\laigvs10\src\pickinginterface.cpp(117): warning C4018: '<' : signed/unsigned mismatch
-         Generating Code...
-         Compiling...
-         TPinterface.cpp
-     1>c:\users\zephiro309\desktop\system\feup\ano3\semestre1\laig\repo\terceira entrega\laigvs10\src\orthocamera.h(15): error C2059: syntax error : ','
-     1>c:\users\zephiro309\desktop\system\feup\ano3\semestre1\laig\repo\terceira entrega\laigvs10\src\orthocamera.h(15): error C2238: unexpected token(s) preceding ';'
-     1>c:\users\zephiro309\desktop\system\feup\ano3\semestre1\laig\repo\terceira entrega\laigvs10\src\perspectivecamera.h(15): error C2059: syntax error : ','
-     1>c:\users\zephiro309\desktop\system\feup\ano3\semestre1\laig\repo\terceira entrega\laigvs10\src\perspectivecamera.h(15): error C2238: unexpected token(s) preceding ';'
-         Generating Code...
-         Compiling...
-         main.cpp
-     1>c:\users\zephiro309\desktop\system\feup\ano3\semestre1\laig\repo\terceira entrega\laigvs10\src\orthocamera.h(15): error C2059: syntax error : ','
-     1>c:\users\zephiro309\desktop\system\feup\ano3\semestre1\laig\repo\terceira entrega\laigvs10\src\orthocamera.h(15): error C2238: unexpected token(s) preceding ';'
-     1>c:\users\zephiro309\desktop\system\feup\ano3\semestre1\laig\repo\terceira entrega\laigvs10\src\perspectivecamera.h(15): error C2059: syntax error : ','
-     1>c:\users\zephiro309\desktop\system\feup\ano3\semestre1\laig\repo\terceira entrega\laigvs10\src\perspectivecamera.h(15): error C2238: unexpected token(s) preceding ';'
-         Generating Code...
      1>Done Building Project "C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\LAIGvs10.vcxproj" (build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:05.93
+Time Elapsed 00:00:01.97

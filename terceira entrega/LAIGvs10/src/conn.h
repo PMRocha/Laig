@@ -1,3 +1,6 @@
+#ifndef CONN_H
+#define CONN_H
+
 #include <stdio.h>
 #include "winsock2.h"
 
@@ -7,3 +10,5 @@
 SOCKET m_socket;
 
 bool socketConnect();
+
+#endif

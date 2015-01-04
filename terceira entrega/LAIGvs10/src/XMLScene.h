@@ -34,6 +34,8 @@
 #include "Texture.h"
 #include "SceneFlag.h"
 
+#include "conn.h"
+
 class XMLScene : public CGFscene
 {
 public:
