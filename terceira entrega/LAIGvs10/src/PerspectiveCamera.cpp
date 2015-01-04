@@ -12,11 +12,11 @@ float PerspectiveCamera::getAngle() const {
 }
 
 float PerspectiveCamera::getFar() const {
-	return far;
+	return farF;
 }
 
 float PerspectiveCamera::getNear() const {
-	return near;
+	return nearF;
 }
 
 
@@ -30,13 +30,13 @@ PerspectiveCamera::PerspectiveCamera(bool activated,float near, float far,
 	this->target[0]=targetX;
 	this->target[1]=targetY;
 	this->target[2]=targetZ;
-	this->near=near;
-	this->far=far;
+	this->nearF=near;
+	this->farF=far;
 	this->angle=angle;
 }
 
 void PerspectiveCamera::applyView()
 {
-	gluPerspective(angle,glutGet(GLUT_WINDOW_WIDTH)/glutGet(GLUT_WINDOW_HEIGHT),near,far);
+	gluPerspective(angle,glutGet(GLUT_WINDOW_WIDTH)/glutGet(GLUT_WINDOW_HEIGHT),nearF,farF);
 	gluLookAt(position[0],position[1],position[2],target[0],target[1],target[2],0,1,0);
 }

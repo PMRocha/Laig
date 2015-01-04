@@ -12,7 +12,7 @@
 #include "CGFcamera.h"
 class OrthoCamera : public CGFcamera {
 private:
-	float near, far, left, right, top, bottom;
+	float nearF, farF, leftF, rightF, topF, bottomF;
 public:
 	OrthoCamera(float near,float far,float left,float right,float top,float bottom,bool activated);
 	virtual ~OrthoCamera();

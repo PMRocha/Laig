@@ -12,7 +12,7 @@
 #include "GL/glut.h"
 class PerspectiveCamera : public CGFcamera {
 private:
-	float near,far,angle;
+	float nearF,farF,angle;
 	float position[3],target[3];
 public:
 	PerspectiveCamera(bool activated,float near,float far,float angle,float positionX,float positionY,float positionZ,float targetX,float targetY,float targetZ);

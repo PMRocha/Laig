@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class SceneAmbient:
+class SceneAmbient
 {
 private:
 	SceneSphere sphere;

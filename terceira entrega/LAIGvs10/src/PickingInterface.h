@@ -1,8 +1,8 @@
 #ifndef PickingInterface_H
 #define PickingInterface_H
 
-#include "CGFinterface.h"
 #include "conn.h"
+#include "CGFinterface.h"
 
 class PickingInterface: public CGFinterface {
 	private:

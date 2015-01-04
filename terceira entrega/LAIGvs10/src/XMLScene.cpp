@@ -20,12 +20,6 @@ void XMLScene::init()
 	//calcs tranformations on primitives
 	sceneGraph->calcPrimitives();
 	//setUpdatePeriod(33);
-
-	//initiate connection
-	if(!connection.socketConnect()) {
-		std::cout << "Socket connection failed... =(" << std::endl;
-		getchar();
-	}
 }
 
 void XMLScene::drawObjects()

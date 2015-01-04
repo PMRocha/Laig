@@ -16,6 +16,6 @@ public:
 	void sendData(char *s, int len);
 	void receiveData(char *ans);
 	void quit();
-}
+};
 
 #endif

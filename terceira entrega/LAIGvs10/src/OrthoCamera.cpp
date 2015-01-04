@@ -10,28 +10,28 @@
 
 
 float OrthoCamera::getBottom() const {
-	return bottom;
+	return bottomF;
 }
 
 float OrthoCamera::getFar() const {
-	return far;
+	return farF;
 }
 
 
 float OrthoCamera::getLeft() const {
-	return left;
+	return leftF;
 }
 
 float OrthoCamera::getNear() const {
-	return near;
+	return nearF;
 }
 
 float OrthoCamera::getRight() const {
-	return right;
+	return rightF;
 }
 
 float OrthoCamera::getTop() const {
-	return top;
+	return topF;
 }
 
 OrthoCamera::~OrthoCamera() {
@@ -41,16 +41,16 @@ OrthoCamera::~OrthoCamera() {
 OrthoCamera::OrthoCamera( float near, float far, float left,
 		float right, float top, float bottom,bool activated)
 {
-	this->near=near;
-	this->far=far;
-	this->left=left;
-	this->right=right;
-	this->top=top;
-	this->bottom=bottom;
+	this->nearF=near;
+	this->farF=far;
+	this->leftF=left;
+	this->rightF=right;
+	this->topF=top;
+	this->bottomF=bottom;
 }
 
 
 void OrthoCamera::applyView()
 {
-	glOrtho(left,right,bottom,top,near,far);
+	glOrtho(leftF,rightF,bottomF,topF,nearF,farF);
 }

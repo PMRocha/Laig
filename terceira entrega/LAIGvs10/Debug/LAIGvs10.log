@@ -1,190 +1,21 @@
-﻿Build started 04/01/2015 17:11:25.
-     1>Project "C:\Users\Pedro\Documents\GitHub\Laig\terceira entrega\LAIGvs10\LAIGvs10.vcxproj" on node 2 (build target(s)).
+﻿Build started 1/4/2015 6:35:58 PM.
+     1>Project "C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\LAIGvs10.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Creating "Debug\LAIGvs10.unsuccessfulbuild" because "AlwaysCreate" was specified.
+         Touching "Debug\LAIGvs10.unsuccessfulbuild".
        ClCompile:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt src\Animation.cpp src\Appearance.cpp src\Camera.cpp src\conn.cpp src\FlagShader.cpp src\Globals.cpp src\Graph.cpp src\Light.cpp src\main.cpp src\Node.cpp src\OrthoCamera.cpp src\PerspectiveCamera.cpp src\PickingInterface.cpp src\SceneBlock.cpp src\SceneBoard.cpp src\SceneFlag.cpp src\ScenePatch.cpp src\ScenePiece.cpp src\ScenePlane.cpp src\Rotation.cpp src\Scaling.cpp src\SceneCylinder.cpp src\SceneObject.cpp src\SceneRectangle.cpp src\SceneSphere.cpp src\SceneTorus.cpp src\SceneTriangle.cpp src\Texture.cpp src\tinystr.cpp src\tinyxml.cpp src\tinyxmlerror.cpp src\tinyxmlparser.cpp src\TPinterface.cpp src\Transformation.cpp src\Translation.cpp src\XMLScene.cpp
-         XMLScene.cpp
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.h(39): error C2236: unexpected 'class' 'XMLScene'. Did you forget a ';'?
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.h(39): error C2143: syntax error : missing ';' before ':'
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.h(39): error C2059: syntax error : ':'
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.h(39): error C2059: syntax error : 'public'
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.h(40): error C2143: syntax error : missing ';' before '{'
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.h(40): error C2447: '{' : missing function header (old-style formal list?)
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(3): error C2653: 'XMLScene' : is not a class or namespace name
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(3): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(5): error C2550: 'XMLScene' : constructor initializer lists are only allowed on constructor definitions
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(8): error C2355: 'this' : can only be referenced inside non-static member functions
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(8): error C2227: left of '->filename' must point to class/struct/union/generic type
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(9): error C2065: 'drawmode' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(11): error C2065: 'lastTime' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(12): error C2065: 'thisTime' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(13): warning C4508: 'XMLScene' : function should return a value; 'void' return type assumed
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(15): error C2653: 'XMLScene' : is not a class or namespace name
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(18): error C3861: 'loadFile': identifier not found
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(21): error C2065: 'sceneGraph' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(21): error C2227: left of '->calcPrimitives' must point to class/struct/union/generic type
-                 type is ''unknown-type''
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(25): error C2065: 'connection' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(25): error C2228: left of '.socketConnect' must have class/struct/union
-                 type is ''unknown-type''
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(31): error C2653: 'XMLScene' : is not a class or namespace name
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(33): error C2065: 'sceneGraph' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(33): error C2227: left of '->getNodes' must point to class/struct/union/generic type
-                 type is ''unknown-type''
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(35): error C2065: 'sceneGraph' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(35): error C2227: left of '->getRootId' must point to class/struct/union/generic type
-                 type is ''unknown-type''
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(41): error C3861: 'auxDrawObjectsRoot': identifier not found
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(43): error C2065: 'piece' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(43): error C2228: left of '.draw' must have class/struct/union
-                 type is ''unknown-type''
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(46): error C2653: 'XMLScene' : is not a class or namespace name
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(50): error C2065: 'sceneGraph' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(50): error C2227: left of '->getNodes' must point to class/struct/union/generic type
-                 type is ''unknown-type''
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(90): error C3861: 'auxDrawObjects': identifier not found
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(96): error C2653: 'XMLScene' : is not a class or namespace name
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(101): error C2065: 'sceneGraph' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(101): error C2227: left of '->getNodes' must point to class/struct/union/generic type
-                 type is ''unknown-type''
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(173): error C2653: 'XMLScene' : is not a class or namespace name
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(180): error C2065: 'activeCamera' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(180): error C2227: left of '->applyView' must point to class/struct/union/generic type
-                 type is ''unknown-type''
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(182): error C2065: 'sceneLights' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(182): error C2228: left of '.size' must have class/struct/union
-                 type is ''unknown-type''
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(184): error C2065: 'activeLights' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(187): error C2065: 'sceneLights' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(187): error C2227: left of '->enable' must point to class/struct/union/generic type
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(188): error C2065: 'sceneLights' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(188): error C2227: left of '->draw' must point to class/struct/union/generic type
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(191): error C2065: 'sceneLights' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(191): error C2227: left of '->disable' must point to class/struct/union/generic type
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(193): error C2065: 'sceneLights' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(193): error C2227: left of '->update' must point to class/struct/union/generic type
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(196): error C3861: 'selectDrawMode': identifier not found
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(202): error C2653: 'XMLScene' : is not a class or namespace name
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(204): error C2065: 'globalVariables' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(204): error C2227: left of '->getBackground' must point to class/struct/union/generic type
-                 type is ''unknown-type''
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(204): error C2065: 'globalVariables' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(204): error C2227: left of '->getBackground' must point to class/struct/union/generic type
-                 type is ''unknown-type''
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(204): error C2065: 'globalVariables' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(204): error C2227: left of '->getBackground' must point to class/struct/union/generic type
-                 type is ''unknown-type''
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(204): error C2065: 'globalVariables' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(204): error C2227: left of '->getBackground' must point to class/struct/union/generic type
-                 type is ''unknown-type''
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(205): error C2065: 'globalVariables' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(205): error C2227: left of '->getDrawmode' must point to class/struct/union/generic type
-                 type is ''unknown-type''
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(206): error C2065: 'globalVariables' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(206): error C2227: left of '->getShading' must point to class/struct/union/generic type
-                 type is ''unknown-type''
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(207): error C2065: 'globalVariables' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(207): error C2227: left of '->getCullorder' must point to class/struct/union/generic type
-                 type is ''unknown-type''
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(208): error C2065: 'globalVariables' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(208): error C2227: left of '->getCullface' must point to class/struct/union/generic type
-                 type is ''unknown-type''
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(214): error C2653: 'XMLScene' : is not a class or namespace name
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.cpp(214): fatal error C1903: unable to recover from previous error(s); stopping compilation
-         Translation.cpp
-         Transformation.cpp
-         TPinterface.cpp
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.h(39): error C2236: unexpected 'class' 'XMLScene'. Did you forget a ';'?
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.h(39): error C2143: syntax error : missing ';' before ':'
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.h(39): error C2059: syntax error : ':'
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.h(39): error C2059: syntax error : 'public'
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.h(40): error C2143: syntax error : missing ';' before '{'
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.h(40): error C2447: '{' : missing function header (old-style formal list?)
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\tpinterface.cpp(19): error C2065: 'XMLScene' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\tpinterface.cpp(19): error C2059: syntax error : ')'
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\tpinterface.cpp(23): error C2065: 'XMLScene' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\tpinterface.cpp(23): error C2059: syntax error : ')'
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\tpinterface.cpp(27): error C2065: 'XMLScene' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\tpinterface.cpp(27): error C2059: syntax error : ')'
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\tpinterface.cpp(28): error C2065: 'XMLScene' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\tpinterface.cpp(28): error C2059: syntax error : ')'
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\tpinterface.cpp(29): error C2065: 'XMLScene' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\tpinterface.cpp(29): error C2059: syntax error : ')'
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\tpinterface.cpp(31): error C2065: 'XMLScene' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\tpinterface.cpp(31): error C2059: syntax error : ')'
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\tpinterface.cpp(35): error C2065: 'XMLScene' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\tpinterface.cpp(35): error C2059: syntax error : ')'
-         tinyxmlparser.cpp
-         tinyxmlerror.cpp
-         tinyxml.cpp
-         tinystr.cpp
-         Texture.cpp
-         SceneTriangle.cpp
-         SceneTorus.cpp
-         SceneSphere.cpp
-         SceneRectangle.cpp
-         SceneObject.cpp
-         SceneCylinder.cpp
-         Scaling.cpp
-         Rotation.cpp
-         ScenePlane.cpp
-         ScenePiece.cpp
-         ScenePatch.cpp
-         Generating Code...
-         Compiling...
-         SceneFlag.cpp
-         SceneBoard.cpp
-         SceneBlock.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt src\PerspectiveCamera.cpp src\PickingInterface.cpp src\SceneAmbient.cpp src\TPinterface.cpp src\XMLScene.cpp src\main.cpp
+         SceneAmbient.cpp
+     1>c:\users\zephiro309\desktop\system\feup\ano3\semestre1\laig\repo\terceira entrega\laigvs10\src\sceneambient.cpp(8): error C3861: 'glFrontFace​': identifier not found
          PickingInterface.cpp
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.h(39): error C2236: unexpected 'class' 'XMLScene'. Did you forget a ';'?
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.h(39): error C2143: syntax error : missing ';' before ':'
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.h(39): error C2059: syntax error : ':'
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.h(39): error C2059: syntax error : 'public'
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.h(40): error C2143: syntax error : missing ';' before '{'
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.h(40): error C2447: '{' : missing function header (old-style formal list?)
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\pickinginterface.cpp(117): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\zephiro309\desktop\system\feup\ano3\semestre1\laig\repo\terceira entrega\laigvs10\src\pickinginterface.cpp(131): warning C4018: '<' : signed/unsigned mismatch
          PerspectiveCamera.cpp
-         OrthoCamera.cpp
-         Node.cpp
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\node.cpp(121): warning C4018: '<' : signed/unsigned mismatch
-         main.cpp
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.h(39): error C2236: unexpected 'class' 'XMLScene'. Did you forget a ';'?
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.h(39): error C2143: syntax error : missing ';' before ':'
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.h(39): error C2059: syntax error : ':'
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.h(39): error C2059: syntax error : 'public'
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.h(40): error C2143: syntax error : missing ';' before '{'
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\xmlscene.h(40): error C2447: '{' : missing function header (old-style formal list?)
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\main.cpp(13): error C2065: 'XMLScene' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\main.cpp(13): error C2065: 'xml' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\main.cpp(15): error C2065: 'xml' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\main.cpp(15): error C2061: syntax error : identifier 'XMLScene'
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\main.cpp(17): error C2065: 'xml' : undeclared identifier
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\main.cpp(17): error C2061: syntax error : identifier 'XMLScene'
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\main.cpp(21): error C2065: 'xml' : undeclared identifier
-         Light.cpp
-         Graph.cpp
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\graph.cpp(118): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\graph.cpp(129): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\graph.cpp(130): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\graph.cpp(143): warning C4018: '<' : signed/unsigned mismatch
-         Globals.cpp
-         FlagShader.cpp
-         conn.cpp
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\conn.cpp(3): error C2628: 'Conn' followed by 'bool' is illegal (did you forget a ';'?)
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\conn.cpp(3): error C2556: 'Conn Conn::socketConnect(void)' : overloaded function differs only by return type from 'bool Conn::socketConnect(void)'
-                 c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\conn.h(15) : see declaration of 'Conn::socketConnect'
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\conn.cpp(3): error C2371: 'Conn::socketConnect' : redefinition; different basic types
-                 c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\conn.h(15) : see declaration of 'Conn::socketConnect'
-         Camera.cpp
-         Appearance.cpp
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\appearance.cpp(17): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\appearance.cpp(17): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-         Animation.cpp
-     1>c:\users\pedro\documents\github\laig\terceira entrega\laigvs10\src\animation.cpp(128): warning C4018: '<' : signed/unsigned mismatch
          Generating Code...
-     1>Done Building Project "C:\Users\Pedro\Documents\GitHub\Laig\terceira entrega\LAIGvs10\LAIGvs10.vcxproj" (build target(s)) -- FAILED.
+         Skipping... (no relevant changes detected)
+         main.cpp
+         XMLScene.cpp
+         TPinterface.cpp
+     1>Done Building Project "C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\LAIGvs10.vcxproj" (build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:12.77
+Time Elapsed 00:00:02.64
