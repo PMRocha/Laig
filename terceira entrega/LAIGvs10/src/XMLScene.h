@@ -34,8 +34,6 @@
 #include "Texture.h"
 #include "SceneFlag.h"
 
-#include "conn.h"
-
 class XMLScene : public CGFscene
 {
 public:
@@ -91,7 +89,5 @@ private:
 	unsigned long thisTime;
 	unsigned long deltaTime;
 	float dtseconds;
-
-	Conn connection;
 };
 #endif
