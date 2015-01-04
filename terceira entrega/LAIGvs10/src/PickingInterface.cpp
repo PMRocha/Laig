@@ -7,6 +7,20 @@
 GLuint selectBuf[BUFSIZE];
 int test[2], picked[2];
 
+PickingInterface::PickingInterface() {
+	//initiate connection
+	if(!connection.socketConnect()) {
+		std::cout << "Failed to establish connection... =(" << std::endl;
+		getchar();
+		exit(0);
+	}
+}
+
+PickingInterface::~PickingInterface() {
+	//terminate connection
+	connection.quit();
+}
+
 void PickingInterface::processMouse(int button, int state, int x, int y) 
 {
 	CGFinterface::processMouse(button,state, x, y);
