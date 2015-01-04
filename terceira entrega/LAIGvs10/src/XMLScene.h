@@ -22,6 +22,7 @@
 #include "SceneRectangle.h"
 #include "SceneTriangle.h"
 #include "SceneCylinder.h"
+#include "SceneAmbient.h"
 #include "SceneSphere.h"
 #include "SceneTorus.h"
 #include "SceneObject.h"

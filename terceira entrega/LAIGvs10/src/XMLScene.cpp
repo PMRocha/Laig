@@ -36,6 +36,7 @@ void XMLScene::drawObjects()
 	glPopMatrix();
 	piece.setColor('b');
 	piece.draw();
+	SceneAmbient().draw();
 }
 
 void XMLScene::auxDrawObjectsRoot()
