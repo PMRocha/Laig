@@ -1,21 +1,17 @@
-﻿Build started 1/4/2015 6:35:58 PM.
+﻿Build started 1/4/2015 6:55:08 PM.
      1>Project "C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\LAIGvs10.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Touching "Debug\LAIGvs10.unsuccessfulbuild".
+         Creating "Debug\LAIGvs10.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt src\PerspectiveCamera.cpp src\PickingInterface.cpp src\SceneAmbient.cpp src\TPinterface.cpp src\XMLScene.cpp src\main.cpp
-         SceneAmbient.cpp
-     1>c:\users\zephiro309\desktop\system\feup\ano3\semestre1\laig\repo\terceira entrega\laigvs10\src\sceneambient.cpp(8): error C3861: 'glFrontFace​': identifier not found
-         PickingInterface.cpp
-     1>c:\users\zephiro309\desktop\system\feup\ano3\semestre1\laig\repo\terceira entrega\laigvs10\src\pickinginterface.cpp(131): warning C4018: '<' : signed/unsigned mismatch
-         PerspectiveCamera.cpp
-         Generating Code...
-         Skipping... (no relevant changes detected)
-         main.cpp
-         XMLScene.cpp
-         TPinterface.cpp
-     1>Done Building Project "C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\LAIGvs10.vcxproj" (build target(s)) -- FAILED.
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
+         LAIGvs10.vcxproj -> C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\LAIGvs10.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\LAIGvs10.unsuccessfulbuild".
+         Touching "Debug\LAIGvs10.lastbuildstate".
+     1>Done Building Project "C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\LAIGvs10.vcxproj" (build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:02.64
+Time Elapsed 00:00:00.10
