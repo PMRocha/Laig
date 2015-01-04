@@ -8,6 +8,7 @@ GLuint selectBuf[BUFSIZE];
 int test[2], picked[2];
 
 PickingInterface::PickingInterface(XMLScene * xene) {
+	mode = "origin";
 	this->xene = xene;
 
 	//initiate connection
@@ -70,6 +71,16 @@ void PickingInterface::processMouse(int button, int state, int x, int y)
 			printf("Picked ID's: ");
 			cout << test[0] << " " << picked[0] << " " << test[1] << " " << picked[1] << " ";
 			printf("\n");
+
+			//send picking data
+			if(test[0] == NULL) {
+				char data[5];
+				char pickedVal[33];
+				strcpy(data, itoa(picked[0], pickedVal, 10));
+				strcat(data, "\n");
+				connection.sendData(data, strlen(data));
+			}
+
 			test[0] = NULL;
 			test[1] = NULL;
 			picked[0] = NULL;
