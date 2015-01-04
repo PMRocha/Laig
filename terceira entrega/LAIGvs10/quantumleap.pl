@@ -43,11 +43,11 @@ player1turn(Board1, Board2, Stream) :-
 	write('\nJOGADOR 1\n'),
 	write('Escolha a posicao da peca que pretende mover:\n'),
 	write('X: '),
-	read(Xpos),
-	write('\n'),
+	read(Stream, Xpos),
+	write('Received X pos: '), write(Xpos), write('\n'),
 	write('Y: '),
-	read(Ypos),
-	write('\n'),
+	read(Stream, Ypos),
+	write('Received Y pos: '), write(Ypos), write('\n'),
 	player1Stage2(Board1, Xpos, Ypos, Board2, Stream).
 
 player1Stage2(Board1, X, Y, Board2, Stream) :-
@@ -61,40 +61,40 @@ player1Stage2(Board1, X, Y, Board2, Stream) :-
 	Piece == 'B',
 	write('Para onde pretende mover esta peca?\n'),
 	write('X: '),
-	read(Xdest),
-	write('\n'),
+	read(Stream, Xdest),
+	write('Received X pos: '), write(Xdest), write('\n'),
 	write('Y: '),
-	read(Ydest),
-	write('\n'),
+	read(Stream, Ydest),
+	write('Received Y pos: '), write(Ydest), write('\n'),
 	movePieceTo(Board1, X, Y, Xdest, Ydest, Board2).
 
 player2turn(Board1, Board2, Stream) :-
 	write('\nJOGADOR 2\n'),
 	write('Escolha a posicao da peca que pretende mover:\n'),
 	write('X: '),
-	read(Xpos),
-	write('\n'),
+	read(Stream, Xpos),
+	write('Received X pos: '), write(Xpos), write('\n'),
 	write('Y: '),
-	read(Ypos),
-	write('\n'),
-	player2Stage2(Board1, Xpos, Ypos, Board2).
+	read(Stream, Ypos),
+	write('Received Y pos: '), write(Ypos), write('\n'),
+	player2Stage2(Board1, Xpos, Ypos, Board2, Stream).
 
 player2Stage2(Board1, X, Y, Board2, Stream) :-
 	boardElementAt(Board1, X, Y, Piece),
 	Piece \== 'W',
 	write('## Como Jogador 2, deve escolher uma peca BRANCA (W) ##\n'),
-	player1turn(Board1, Board2).
+	player1turn(Board1, Board2, Stream).
 
 player2Stage2(Board1, X, Y, Board2, Stream) :-
 	boardElementAt(Board1, X, Y, Piece),
 	Piece == 'W',
 	write('Para onde pretende mover esta peca?\n'),
 	write('X: '),
-	read(Xdest),
-	write('\n'),
+	read(Stream, Xdest),
+	write('Received X pos: '), write(Xdest), write('\n'),
 	write('Y: '),
-	read(Ydest),
-	write('\n'),
+	read(Stream, Ydest),
+	write('Received Y pos: '), write(Ydest), write('\n'),
 	movePieceTo(Board1, X, Y, Xdest, Ydest, Board2).
 
 sendInitialState(X, Stream) :-
