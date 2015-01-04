@@ -39,6 +39,7 @@ class XMLScene : public CGFscene
 {
 public:
 	char board[9][9];
+	std::vector<ScenePiece> pieces;
 	ScenePiece piece;
 	XMLScene(char *filename);
 	~XMLScene();

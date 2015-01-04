@@ -34,6 +34,21 @@ PickingInterface::PickingInterface(XMLScene * xene) {
 		}
 		std::cout << std::endl;
 	}
+
+	//initialize pieces
+	for(int i = 0; i < 9; i++) {
+		for(int j = 0; j < 9; j++) {
+			if(xene->board[i][j] == 'B' || xene->board[i][j] == 'W') {
+				ScenePiece sp(0.0f, 0.0f, 0.0f);
+				xene->pieces.push_back(sp);
+				xene->pieces.back().setName(i, j);
+				if(xene->board[i][j] == 'B')
+					xene->pieces.back().setColor('b');
+				else
+					xene->pieces.back().setColor('w');
+			}
+		}
+	}
 }
 
 PickingInterface::~PickingInterface() {
