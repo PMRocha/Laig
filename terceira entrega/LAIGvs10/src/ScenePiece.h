@@ -3,6 +3,7 @@
 #include "SceneObject.h"
 #include "ScenePlane.h"
 #include "SceneCylinder.h"
+#include "CGFtexture.h"
 using namespace std;
 
 class ScenePiece:public SceneObject
@@ -10,11 +11,12 @@ class ScenePiece:public SceneObject
 private:
 	SceneCylinder piece;
 	Point coords;
+	char color;
 public:
 	ScenePiece(double x, double y, double z);
 	~ScenePiece(void);
 	void draw(void);
-
+	void setColor(char type);
 	void move(float deltaTime);
 };
 

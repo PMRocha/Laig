@@ -40,6 +40,7 @@ void XMLScene::drawObjects()
 
 	auxDrawObjectsRoot();
 	glPopMatrix();
+	piece.setColor('b');
 	piece.draw();
 }
 
