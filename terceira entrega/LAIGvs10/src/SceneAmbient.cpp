@@ -1,6 +1,6 @@
 ﻿#include "SceneAmbient.h"
 
-SceneAmbient::SceneAmbient():sphere(40,30,30)
+SceneAmbient::SceneAmbient():sphere(12,30,30)
 {
 }
 
