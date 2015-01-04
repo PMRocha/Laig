@@ -39,3 +39,30 @@ bool Conn::socketConnect() {
 	printf("Connected\n");
 	return true;
 }
+
+void Conn::sendData(char* s, int len) {
+	int bytesSent = send(m_socket, s, len, 0);
+	if(bytesSent == SOCKET_ERROR)
+		printf("Client: send() error %ld.\n", WSAGetLastError());
+}
+
+void Conn::receiveData(char * ans) {
+	int bytesRecv = SOCKET_ERROR;
+	int pos = 0;
+	while (true) {
+		recv(m_socket, &ans[pos], 1, 0);
+		if (ans[pos] == '\n')
+			break;
+		pos++;
+	}
+	ans[pos] = 0;
+	std::cout << "prolog answered: " << ans << std::endl;
+}
+
+void Conn::quit() {
+	std::cout << "Requestin server for connection termination." << std::endl;
+	char buff[] = "quit.\n";
+	sendData(buff, 6);
+	char ans[128];
+	receiveData(ans);
+}
