@@ -6,7 +6,6 @@ SceneAmbient::SceneAmbient():sphere(12,30,30)
 
 void SceneAmbient::draw(){
 	glFrontFace(GL_CW);
-	CGFtexture("sky.jpg").apply();
-	sphere.draw();
+	sphere.draw("sky.jpg");
 	glFrontFace(GL_CCW);
 }
