@@ -20,7 +20,7 @@ int main (int argc, char* argv[])
 		 
 		app.setScene(xml);
 		app.setInterface(new TPinterface());
-		app.setInterface(new PickingInterface());
+		app.setInterface(new PickingInterface(xml));
 		app.run();
 	}
 	catch(GLexception& ex) {

@@ -7,12 +7,32 @@
 GLuint selectBuf[BUFSIZE];
 int test[2], picked[2];
 
-PickingInterface::PickingInterface() {
+PickingInterface::PickingInterface(XMLScene * xene) {
+	this->xene = xene;
+
 	//initiate connection
 	if(!connection.socketConnect()) {
 		std::cout << "Failed to establish connection... =(" << std::endl;
 		getchar();
 		exit(0);
+	}
+
+	//get board's initial state
+	for(int i = 0; i < 9; i++) {
+		for(int j = 0; j < 9; j++) {
+			char element[256];
+			connection.receiveData(element);
+			xene->board[i][j] = element[1];
+		}
+	}
+
+	//TEST: print board
+	std::cout << "INITAL BOARD CONDITION:" << std::endl;
+	for(int i = 0; i < 9; i++) {
+		for(int j = 0; j < 9; j++) {
+			std::cout << xene->board[i][j];
+		}
+		std::cout << std::endl;
 	}
 }
 
@@ -47,7 +67,6 @@ void PickingInterface::processMouse(int button, int state, int x, int y)
 			picked[1] = NULL;
 
 		}
-
 	}
 }
 

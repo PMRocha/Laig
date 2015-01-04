@@ -38,6 +38,7 @@
 class XMLScene : public CGFscene
 {
 public:
+	char board[9][9];
 	ScenePiece piece;
 	XMLScene(char *filename);
 	~XMLScene();
