@@ -2,6 +2,10 @@
 * MAIN FUNCTIONS AND GAME LOOP *
 *******************************/
 
+:-use_module(library(sockets)).
+
+port(60070).
+
 :- include('output.pl').
 :- include('boardmanip.pl').
 
@@ -17,18 +21,25 @@ emptyBoard([[' ',' ',' ',' ',' ','#','#','#','#'],
 			]).
 
 start(X) :-
+	port(Port),
+	socket_server_open(Port, Socket),
+	socket_server_accept(Socket, _Client, Stream, [type(text)]),
+	write('Connection established\n'),
 	generateGameBoard(X),
 	printBoard(X),
-	playGame(X).
+	/* send initial board state */
+	sendInitialState(X, Stream),
+	playGame(X, Stream),
+	socket_server_close(Socket).
 
-playGame(X) :-		
-	player1turn(X, X1),
+playGame(X, Stream) :-
+	player1turn(X, X1, Stream),
 	printBoard(X1),
-	player2turn(X1, X2),
+	player2turn(X1, X2, Stream),
 	printBoard(X2),
 	playGame(X2).
 
-player1turn(Board1, Board2) :-
+player1turn(Board1, Board2, Stream) :-
 	write('\nJOGADOR 1\n'),
 	write('Escolha a posicao da peca que pretende mover:\n'),
 	write('X: '),
@@ -37,15 +48,15 @@ player1turn(Board1, Board2) :-
 	write('Y: '),
 	read(Ypos),
 	write('\n'),
-	player1Stage2(Board1, Xpos, Ypos, Board2).
+	player1Stage2(Board1, Xpos, Ypos, Board2, Stream).
 
-player1Stage2(Board1, X, Y, Board2) :-
+player1Stage2(Board1, X, Y, Board2, Stream) :-
 	boardElementAt(Board1, X, Y, Piece),
 	Piece \== 'B',
 	write('## Como Jogador 1, deve escolher uma peca PRETA (B) ##\n'),
 	player1turn(Board1, Board2).
 
-player1Stage2(Board1, X, Y, Board2) :-
+player1Stage2(Board1, X, Y, Board2, Stream) :-
 	boardElementAt(Board1, X, Y, Piece),
 	Piece == 'B',
 	write('Para onde pretende mover esta peca?\n'),
@@ -57,7 +68,7 @@ player1Stage2(Board1, X, Y, Board2) :-
 	write('\n'),
 	movePieceTo(Board1, X, Y, Xdest, Ydest, Board2).
 
-player2turn(Board1, Board2) :-
+player2turn(Board1, Board2, Stream) :-
 	write('\nJOGADOR 2\n'),
 	write('Escolha a posicao da peca que pretende mover:\n'),
 	write('X: '),
@@ -68,13 +79,13 @@ player2turn(Board1, Board2) :-
 	write('\n'),
 	player2Stage2(Board1, Xpos, Ypos, Board2).
 
-player2Stage2(Board1, X, Y, Board2) :-
+player2Stage2(Board1, X, Y, Board2, Stream) :-
 	boardElementAt(Board1, X, Y, Piece),
 	Piece \== 'W',
 	write('## Como Jogador 2, deve escolher uma peca BRANCA (W) ##\n'),
 	player1turn(Board1, Board2).
 
-player2Stage2(Board1, X, Y, Board2) :-
+player2Stage2(Board1, X, Y, Board2, Stream) :-
 	boardElementAt(Board1, X, Y, Piece),
 	Piece == 'W',
 	write('Para onde pretende mover esta peca?\n'),
@@ -85,3 +96,167 @@ player2Stage2(Board1, X, Y, Board2) :-
 	read(Ydest),
 	write('\n'),
 	movePieceTo(Board1, X, Y, Xdest, Ydest, Board2).
+
+sendInitialState(X, Stream) :-
+	boardElementAt(X, 0, 0, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 1, 0, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 2, 0, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 3, 0, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 4, 0, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 5, 0, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 6, 0, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 7, 0, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 8, 0, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 0, 1, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 1, 1, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 2, 1, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 3, 1, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 4, 1, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 5, 1, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 6, 1, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 7, 1, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 8, 1, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 0, 2, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 1, 2, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 2, 2, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 3, 2, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 4, 2, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 5, 2, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 6, 2, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 7, 2, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 8, 2, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 0, 3, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 1, 3, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 2, 3, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 3, 3, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 4, 3, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 5, 3, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 6, 3, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 7, 3, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 8, 3, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 0, 4, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 1, 4, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 2, 4, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 3, 4, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 4, 4, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 5, 4, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 6, 4, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 7, 4, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 8, 4, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 0, 5, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 1, 5, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 2, 5, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 3, 5, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 4, 5, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 5, 5, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 6, 5, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 7, 5, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 8, 5, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 0, 6, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 1, 6, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 2, 6, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 3, 6, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 4, 6, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 5, 6, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 6, 6, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 7, 6, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 8, 6, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 0, 7, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 1, 7, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 2, 7, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 3, 7, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 4, 7, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 5, 7, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 6, 7, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 7, 7, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 8, 7, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 0, 8, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 1, 8, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 2, 8, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 3, 8, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 4, 8, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 5, 8, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 6, 8, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 7, 8, Piece),
+	format(Stream, '~q.~n', [Piece]),
+	boardElementAt(X, 8, 8, Piece),
+	format(Stream, '~q.~n', [Piece]).
