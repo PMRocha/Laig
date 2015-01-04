@@ -19,6 +19,8 @@ void ScenePiece::draw(void)
 		t = CGFtexture("black.jpg");
 	else
 		t = CGFtexture("white.jpg");
+
+	t.apply();
 	glPushName(-1);	
 	glLoadName(4);
 	glPushName(5);
