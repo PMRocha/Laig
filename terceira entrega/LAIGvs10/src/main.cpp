@@ -1,7 +1,7 @@
+#include "XMLScene.h"
 #include "CGFapplication.h"
 #include <iostream>
 #include <string>
-#include "XMLScene.h"
 #include "TPinterface.h"
 #include "PickingInterface.h"
 

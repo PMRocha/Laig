@@ -7,6 +7,7 @@
 #include <sstream>
 #include <iomanip>
 #include <map>
+#include <stdio.h>
 #include "CGFscene.h"
 #include "tinyxml.h"
 #include "Light.h"
@@ -32,7 +33,6 @@
 #include "Appearance.h"
 #include "Texture.h"
 #include "SceneFlag.h"
-
 
 class XMLScene : public CGFscene
 {

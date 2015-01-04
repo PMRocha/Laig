@@ -1,6 +1,5 @@
 #include "XMLScene.h"
 
-
 XMLScene::XMLScene(char *filename) :
 	piece(2.0, 2.0, 2.0)
 {
@@ -21,6 +20,12 @@ void XMLScene::init()
 	//calcs tranformations on primitives
 	sceneGraph->calcPrimitives();
 	//setUpdatePeriod(33);
+
+	//initiate connection
+	if(!socketConnect()) {
+		std::cout << "Socket connection failed... =(" << std::endl;
+		getchar();
+	}
 }
 
 void XMLScene::drawObjects()
