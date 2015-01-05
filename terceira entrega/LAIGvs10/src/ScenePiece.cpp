@@ -23,9 +23,18 @@ void ScenePiece::draw(void)
 	glTranslatef(coords.x,coords.y, coords.z);
 	glTranslatef(0.0f, 0.0f, (1.5*row));
 	if(column <= 4)
-		glTranslatef(-(sin(PI/3.0)*column), 0.0f,0.0f);
+	{
+		for(int i=0;i<column;i++){
+			glTranslatef(sin(PI/3.0), 0.0f,0.0f);
+		}
+		
+	}
 	else
-		glTranslatef(-(sin(PI/3.0)*(8-column)), 0.0f,0.0f);
+	{
+		for(int i=0;i<(8-column);i++){
+			glTranslatef(sin(PI/3.0), 0.0f,0.0f);
+		}
+	}
 	glScalef(0.5,1,0.5);
 	glRotatef(-90,1,0,0);
 
