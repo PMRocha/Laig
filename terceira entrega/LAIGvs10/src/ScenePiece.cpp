@@ -16,13 +16,7 @@ ScenePiece::ScenePiece(double x, double y, double z):piece(1,1,0.5,20,20)
 void ScenePiece::draw(void)
 {
 	glPushMatrix();
-	CGFtexture t;
-	if(color == 'b')
-		t = CGFtexture("black.jpg");
-	else
-		t = CGFtexture("white.jpg");
-
-	t.apply();
+	texture.apply();
 	glPushName(-1);	
 	glLoadName(row);
 	glPushName(column);
@@ -50,6 +44,10 @@ void ScenePiece::move(float deltaTime) {
 
 void ScenePiece::setColor(char type){
 	color=type;
+	if(type = 'b')
+		texture = CGFtexture("black.jpg");
+	else
+		texture = CGFtexture("white.jpg");
 }
 
 void ScenePiece::setName(int row, int column){

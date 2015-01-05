@@ -13,6 +13,7 @@ private:
 	Point coords;
 	char color;
 	int row, column;
+	CGFtexture texture;
 public:
 	ScenePiece(double x, double y, double z);
 	~ScenePiece(void);
