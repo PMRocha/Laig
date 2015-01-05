@@ -36,8 +36,8 @@ void XMLScene::drawObjects()
 	glPopMatrix();
 	piece.setColor('b');
 	piece.draw();
-	//for(int i = 0; i < pieces.size(); i++)
-	//	pieces[i].draw();
+	for(int i = 0; i < pieces.size(); i++)
+		pieces[i].draw();
 	SceneAmbient().draw();
 }
 
