@@ -25,14 +25,14 @@ void ScenePiece::draw(void)
 	if(column <= 4)
 	{
 		for(int i=0;i<column;i++){
-			glTranslatef(sin(PI/3.0), 0.0f,0.0f);
+			glTranslatef(2*sin(PI/3.0), 0.0f,0.0f);
 		}
 		
 	}
 	else
 	{
 		for(int i=0;i<(8-column);i++){
-			glTranslatef(sin(PI/3.0), 0.0f,0.0f);
+			glTranslatef(2*sin(PI/3.0), 0.0f,0.0f);
 		}
 	}
 	glScalef(0.5,1,0.5);
