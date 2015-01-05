@@ -39,6 +39,8 @@ void ScenePiece::draw(void)
 	glRotatef(-90,1,0,0);
 
 	piece.draw();
+	glPopName();
+	glPopName();
 	glPopMatrix();
 }
 
