@@ -42,7 +42,7 @@ PickingInterface::PickingInterface(XMLScene * xene) {
 			if(xene->board[i][j] == 'B' || xene->board[i][j] == 'W') {
 				ScenePiece sp(0.0f, 0.0f, 0.0f);
 				xene->pieces.push_back(sp);
-				xene->pieces.back().setName(i, j);
+				xene->pieces.back().setName(j, i);
 				if(xene->board[i][j] == 'B')
 					xene->pieces.back().setColor('b');
 				else
