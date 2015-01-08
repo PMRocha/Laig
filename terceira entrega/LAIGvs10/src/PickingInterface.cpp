@@ -75,6 +75,18 @@ void PickingInterface::processMouse(int button, int state, int x, int y)
 			xene->ring.move(picked[0],picked[1]);
 
 			//send picking data
+			if(test[1] != NULL) {
+				std::string data;
+				char datac[10];
+				std::ostringstream ss;
+				ss << picked[1];
+				data = ss.str();
+				strcpy(datac, data.c_str());
+				strcat(datac, ".\n");
+				connection.sendData(datac, strlen(datac));
+				std::cout << "Sent: " << datac << std::endl;
+				std::cout << "Size: " << strlen(datac) << std::endl;
+			}
 			if(test[0] != NULL) {
 				std::string data;
 				char datac[10];
@@ -86,16 +98,6 @@ void PickingInterface::processMouse(int button, int state, int x, int y)
 				connection.sendData(datac, strlen(datac));
 				std::cout << "Sent: " << datac << std::endl;
 				std::cout << "Size: " << strlen(datac) << std::endl;
-
-				//char str[100];
-				//char data[5];
-				//char pickedVal[33];
-				//strcpy(data, itoa(picked[0], pickedVal, 10));
-				//strcat(str, "beginning");
-				//strcat(str, data);
-				//strcat(str, "end\n");
-				//connection.sendData(data, 1);
-				//std::cout << "Sent: " << data << std::endl;
 			}
 
 			test[0] = NULL;

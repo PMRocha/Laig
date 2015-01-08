@@ -34,7 +34,7 @@ start(X) :-
 	playGame(X, Stream),
 	socket_server_close(Socket).
 
-playGame(X, Stream) :-
+playGame(X, Stream) :-	
 	player1turn(X, X1, Stream),
 	printBoard(X1),
 	player2turn(X1, X2, Stream),
@@ -56,7 +56,7 @@ player1Stage2(Board1, X, Y, Board2, Stream) :-
 	boardElementAt(Board1, X, Y, Piece),
 	Piece \== 'B',
 	write('## Como Jogador 1, deve escolher uma peca PRETA (B) ##\n'),
-	player1turn(Board1, Board2).
+	player1turn(Board1, Board2, Stream).
 
 player1Stage2(Board1, X, Y, Board2, Stream) :-
 	boardElementAt(Board1, X, Y, Piece),
