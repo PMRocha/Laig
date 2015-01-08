@@ -40,7 +40,7 @@ bool Conn::socketConnect() {
 	return true;
 }
 
-void Conn::sendData(char* s, int len) {
+void Conn::sendData(char * s, int len) {
 	int bytesSent = send(m_socket, s, len, 0);
 	if(bytesSent == SOCKET_ERROR)
 		printf("Client: send() error %ld.\n", WSAGetLastError());

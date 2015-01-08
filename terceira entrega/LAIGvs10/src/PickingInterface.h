@@ -5,6 +5,7 @@
 #include "CGFinterface.h"
 #include "XMLScene.h"
 #include <string>
+#include <sstream>
 #include <string.h>
 #include <stdlib.h>
 

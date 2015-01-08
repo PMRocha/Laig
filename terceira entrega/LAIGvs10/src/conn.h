@@ -13,8 +13,8 @@ private:
 	SOCKET m_socket;
 public:
 	bool socketConnect();
-	void sendData(char *s, int len);
-	void receiveData(char *ans);
+	void sendData(char * s, int len);
+	void receiveData(char * ans);
 	void quit();
 };
 
