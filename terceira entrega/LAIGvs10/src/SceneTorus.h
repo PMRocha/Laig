@@ -14,6 +14,8 @@ private:
 	float outer;
 	int slices;
 	int loop;
+	int row;
+	int column;
 	float ringRadius;
 	vector <vector<Point>> points;
 	vector <vector<Point>> normals;
@@ -27,6 +29,7 @@ public:
 	void textsCalc();
 	Point textCalc(int i, int j,float angle);
 	void draw();
+	void move(int row, int column);
 };
 
 #endif

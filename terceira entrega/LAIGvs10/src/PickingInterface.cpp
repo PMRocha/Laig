@@ -71,6 +71,8 @@ void PickingInterface::processMouse(int button, int state, int x, int y)
 			printf("Picked ID's: ");
 			cout << test[0] << " " << picked[0] << " " << test[1] << " " << picked[1] << " ";
 			printf("\n");
+			xene->picked = true;
+			xene->ring.move(picked[0],picked[1]);
 
 			//send picking data
 			if(test[0] == NULL) {
@@ -79,6 +81,7 @@ void PickingInterface::processMouse(int button, int state, int x, int y)
 				strcpy(data, itoa(picked[0], pickedVal, 10));
 				strcat(data, "\n");
 				connection.sendData(data, strlen(data));
+
 			}
 
 			test[0] = NULL;

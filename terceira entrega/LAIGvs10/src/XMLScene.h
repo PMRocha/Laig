@@ -42,11 +42,11 @@ public:
 	std::vector<ScenePiece> pieces;
 	ScenePiece piece;
 	SceneAmbient ambient;
-	//SceneTorus ring;
+	SceneTorus ring;
 	XMLScene(char *filename);
 	~XMLScene();
 	void init();
-
+	bool picked;
 	void defineGlobalVariables();
 
 	void display();

@@ -1,10 +1,10 @@
-﻿Build started 08/01/2015 18:05:56.
+﻿Build started 08/01/2015 18:58:23.
      1>Project "C:\Users\Pedro\Documents\GitHub\Laig\terceira entrega\LAIGvs10\LAIGvs10.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Touching "Debug\LAIGvs10.unsuccessfulbuild".
+         Creating "Debug\LAIGvs10.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt src\SceneSphere.cpp
-         SceneSphere.cpp
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt src\SceneTorus.cpp
+         SceneTorus.cpp
        Link:
          c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Pedro\Documents\GitHub\Laig\terceira entrega\LAIGvs10\Debug\LAIGvs10.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib WS2_32.lib lib\TinyXML.lib lib\glew32.lib lib\glew32mx.lib lib\glew32mxs.lib lib\glew32s.lib lib\glui32.lib lib\glui32d.lib lib\glut32.lib lib\CGFlib.lib /MANIFEST /ManifestFile:"Debug\LAIGvs10.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Pedro\Documents\GitHub\Laig\terceira entrega\LAIGvs10\Debug\LAIGvs10.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Pedro\Documents\GitHub\Laig\terceira entrega\LAIGvs10\Debug\LAIGvs10.lib" /MACHINE:X86 Debug\Animation.obj
          Debug\Appearance.obj
@@ -66,4 +66,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.87
+Time Elapsed 00:00:01.51

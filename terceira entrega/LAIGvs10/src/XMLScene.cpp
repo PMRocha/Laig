@@ -1,7 +1,7 @@
 #include "XMLScene.h"
 
 XMLScene::XMLScene(char *filename) :
-	piece(2.0, 2.0, 2.0)
+	piece(2.0, 2.0, 2.0),ring(0.9,1.0,5,5)
 {
 
 	// Read XML from file
@@ -20,7 +20,7 @@ void XMLScene::init()
 	//calcs tranformations on primitives
 	sceneGraph->calcPrimitives();
 	
-	//setUpdatePeriod(33);
+	setUpdatePeriod(33);
 }
 
 void XMLScene::drawObjects()
@@ -806,10 +806,13 @@ void XMLScene::update(unsigned long millis) {
 	deltaTime = thisTime - lastTime;
 	dtseconds = deltaTime / 1000.0f;
 
-	std::cout << lastTime << " " << thisTime << " " << deltaTime << " " << dtseconds << std::endl;
+	//std::cout << lastTime << " " << thisTime << " " << deltaTime << " " << dtseconds << std::endl;
 
 	//place socket comms here
 
 	//place animation related ops here, usign dtseconds
-	piece.move(dtseconds);
+	//piece.move(dtseconds);
+	cout << picked << endl;
+	if(picked)
+		ring.draw();
 }

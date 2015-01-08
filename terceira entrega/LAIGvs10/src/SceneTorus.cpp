@@ -15,7 +15,7 @@ SceneTorus::SceneTorus(float inner,float outer,int slices,int loop)
 	float mediumRadius=ringRadius+inner;
 	vector<Point> help;
 
-
+	row =0; column =0; 
 
 	for (double phi = 0; phi < 2*PI+phiJump;phi+=phiJump) // Elevation [0, PI]
 	{
@@ -73,7 +73,9 @@ void SceneTorus::draw()
 
 		}  
 		glEnd();
+
 	}
+	
 }
 
 void SceneTorus::normalsCalc()
@@ -181,4 +183,10 @@ Point SceneTorus::textCalc(int i,int j,float angle)
 SceneTorus::~SceneTorus(void)
 {
 
+}
+
+void SceneTorus::move(int row, int column)
+{
+	this->row = row;
+	this->column = column;
 }
