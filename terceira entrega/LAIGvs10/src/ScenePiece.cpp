@@ -16,7 +16,10 @@ ScenePiece::ScenePiece(double x, double y, double z):piece(1,1,0.5,20,20)
 void ScenePiece::draw(void)
 {
 	glPushMatrix();
-	texture.apply();
+	glEnable(GL_TEXTURE_2D); 
+
+	texture->apply();
+
 	glPushName(-1);	
 	glLoadName(row);
 	glPushName(column);
@@ -45,16 +48,16 @@ ScenePiece::~ScenePiece(void)
 }
 
 void ScenePiece::move(float deltaTime) {
-	coords.x += 10 * deltaTime;
-	std::cout << deltaTime << std::endl;
+	//coords.x += 10 * deltaTime;
+	//std::cout << deltaTime << std::endl;
 }
 
-void ScenePiece::setColor(char type){
+void ScenePiece::setColor(char type, CGFtexture * scene){
 	color=type;
 	if(type = 'b')
-		texture = CGFtexture("black.jpg");
+		texture = scene;
 	else
-		texture = CGFtexture("white.jpg");
+		texture = scene;
 }
 
 void ScenePiece::setName(int row, int column){

@@ -4,6 +4,8 @@
 #include "ScenePlane.h"
 #include "SceneCylinder.h"
 #include "CGFtexture.h"
+
+
 using namespace std;
 
 class ScenePiece:public SceneObject
@@ -13,12 +15,12 @@ private:
 	Point coords;
 	char color;
 	int row, column;
-	CGFtexture texture;
+	CGFtexture* texture;
 public:
 	ScenePiece(double x, double y, double z);
 	~ScenePiece(void);
 	void draw(void);
-	void setColor(char type);
+	void setColor(char type, CGFtexture * scene);
 	void move(float deltaTime);
 	void setName(int row, int column);
 };

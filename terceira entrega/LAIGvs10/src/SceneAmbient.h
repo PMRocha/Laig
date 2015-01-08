@@ -1,7 +1,7 @@
 #ifndef _SCENEAMBIENT_H_
 #define _SCENEAMBIENT_H_
 #include "SceneSphere.h"
-#include "Texture.h"
+#include "Appearance.h"
 #include <GL/GL.h>
 
 using namespace std;
@@ -12,7 +12,7 @@ private:
 	SceneSphere sphere;
 public:
 	SceneAmbient();
-	void draw();
+	void draw(Appearance * tex);
 };
 
 #endif

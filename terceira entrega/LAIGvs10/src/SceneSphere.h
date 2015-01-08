@@ -18,7 +18,7 @@ public:
 	SceneSphere(float radius,int slices, int stacks);
 	~SceneSphere(void);
 	void draw(void);
-	void draw(string tex);
+
 };
 
 #endif

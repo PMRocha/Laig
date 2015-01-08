@@ -19,11 +19,13 @@ void XMLScene::init()
 	glMatrixMode(GL_MODELVIEW);
 	//calcs tranformations on primitives
 	sceneGraph->calcPrimitives();
+	
 	//setUpdatePeriod(33);
 }
 
 void XMLScene::drawObjects()
 {
+	
 	vector<Node*> nodes = sceneGraph->getNodes();
 
 	string id=sceneGraph->getRootId();
@@ -34,11 +36,10 @@ void XMLScene::drawObjects()
 
 	auxDrawObjectsRoot();
 	glPopMatrix();
-	piece.setColor('b');
-	piece.draw();
+
 	for(int i = 0; i < pieces.size(); i++)
 		pieces[i].draw();
-	SceneAmbient().draw();
+
 }
 
 void XMLScene::auxDrawObjectsRoot()
@@ -192,6 +193,7 @@ void XMLScene::display()
 	}
 
 	selectDrawMode();
+	ambient.draw(appearances["stars1"]);
 	drawObjects();
 	glutSwapBuffers();
 }

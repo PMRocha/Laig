@@ -44,9 +44,9 @@ PickingInterface::PickingInterface(XMLScene * xene) {
 				xene->pieces.push_back(sp);
 				xene->pieces.back().setName(j, i);
 				if(xene->board[i][j] == 'B')
-					xene->pieces.back().setColor('b');
+					xene->pieces.back().setColor('b',xene->sceneTextures["black"]);
 				else
-					xene->pieces.back().setColor('w');
+					xene->pieces.back().setColor('w',xene->sceneTextures["white"]);
 			}
 		}
 	}

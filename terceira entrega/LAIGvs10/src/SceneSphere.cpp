@@ -13,21 +13,13 @@ SceneSphere::SceneSphere(float radius,int slices, int stacks)
 
 void SceneSphere::draw(void)
 {
-	GLUquadric *quad= gluNewQuadric();
-	gluQuadricTexture(quad,GL_TRUE);
-	gluQuadricOrientation(quad,GLU_OUTSIDE);
-	gluSphere(quad,radius,slices,stacks);
-}
-
-void SceneSphere::draw(string tex)
-{
-	CGFtexture texture = CGFtexture("sky.jpg");
 	
 	GLUquadric *quad= gluNewQuadric();
 	gluQuadricTexture(quad,GL_TRUE);
-	texture.apply();
 	gluQuadricOrientation(quad,GLU_OUTSIDE);
 	gluSphere(quad,radius,slices,stacks);
+	
+	
 }
 
 

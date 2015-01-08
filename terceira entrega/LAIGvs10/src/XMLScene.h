@@ -41,6 +41,8 @@ public:
 	char board[9][9];
 	std::vector<ScenePiece> pieces;
 	ScenePiece piece;
+	SceneAmbient ambient;
+	//SceneTorus ring;
 	XMLScene(char *filename);
 	~XMLScene();
 	void init();
@@ -71,14 +73,18 @@ public:
 	void auxDrawObjects(vector<string> sonIds,pair<string,Appearance*> fatherAppearance);
 	void selectDrawMode();
 	void auxDrawObjectsRoot();
+
+	map<string,CGFtexture*> sceneTextures;
+	map<string,Appearance*> appearances;
+
 private:
 	Globals* globalVariables;
 	vector<Light*> sceneLights;
 	vector<pair<char*,CGFcamera*> > sceneCameras;
 	map<string,Texture*> Textures;
 	map<string,Animation*> Animations;
-	map<string,CGFtexture*> sceneTextures;
-	map<string,Appearance*> appearances;
+	
+	
 	Graph* sceneGraph;
 	char* filename;
 	vector<int> activeLights;
