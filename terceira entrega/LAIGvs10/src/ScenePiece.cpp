@@ -64,3 +64,7 @@ void ScenePiece::setName(int row, int column){
 	this->row = row;
 	this->column = column;
 }
+
+bool ScenePiece::checkName(int row, int column) {
+	return (this->row == row && this->column == column);
+}

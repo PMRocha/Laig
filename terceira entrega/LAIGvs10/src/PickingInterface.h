@@ -14,6 +14,7 @@ class PickingInterface: public CGFinterface {
 		Conn connection;
 		XMLScene * xene;
 		std::string mode;
+		int originX, originY, destX, destY;
 	public:
 		PickingInterface(XMLScene *xene);
 		~PickingInterface();

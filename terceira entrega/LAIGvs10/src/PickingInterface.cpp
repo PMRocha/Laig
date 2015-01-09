@@ -28,7 +28,7 @@ PickingInterface::PickingInterface(XMLScene * xene) {
 	}
 
 	//TEST: print board
-	std::cout << "INITAL BOARD CONDITION:" << std::endl;
+	std::cout << "INITIAL BOARD CONDITION:" << std::endl;
 	for(int i = 0; i < 9; i++) {
 		for(int j = 0; j < 9; j++) {
 			std::cout << xene->board[i][j];
@@ -45,7 +45,7 @@ PickingInterface::PickingInterface(XMLScene * xene) {
 				xene->pieces.back().setName(j, i);
 				if(xene->board[i][j] == 'B')
 					xene->pieces.back().setColor('b',xene->sceneTextures["black"]);
-				else
+				else if(xene->board[i][j] == 'W')
 					xene->pieces.back().setColor('w',xene->sceneTextures["white"]);
 			}
 		}
@@ -75,7 +75,7 @@ void PickingInterface::processMouse(int button, int state, int x, int y)
 			xene->ring.move(picked[0],picked[1]);
 
 			//send picking data
-			if(test[1] != NULL) {
+			if(test[1] != -1) {
 				std::string data;
 				char datac[10];
 				std::ostringstream ss;
@@ -87,7 +87,7 @@ void PickingInterface::processMouse(int button, int state, int x, int y)
 				std::cout << "Sent: " << datac << std::endl;
 				std::cout << "Size: " << strlen(datac) << std::endl;
 			}
-			if(test[0] != NULL) {
+			if(test[0] != -1) {
 				std::string data;
 				char datac[10];
 				std::ostringstream ss;
@@ -99,17 +99,44 @@ void PickingInterface::processMouse(int button, int state, int x, int y)
 				std::cout << "Sent: " << datac << std::endl;
 				std::cout << "Size: " << strlen(datac) << std::endl;
 			}
+			//receive confirmation
+			if(test[0] != -1) {
+				char ans[10];
+				connection.receiveData(ans);
+				if(ans[0] == '1') {
+					std::cout << "Switching." << std::endl;
+					if(mode == "origin") {
+						originX = picked[1];
+						originY = picked[0];
+						mode = "destination";
+					} else {
+						destX = picked[1];
+						destY = picked[0];
+						for(int i = 0; i < xene->pieces.size(); i++) {
+							if(xene->pieces[i].checkName(destX, destY)){
+								xene->pieces.erase(xene->pieces.begin() + i);
+							}
+						}
+						for(int i = 0; i < xene->pieces.size(); i++) {
+							if(xene->pieces[i].checkName(originX, originY)) {
+								xene->pieces[i].setName(destX, destY);
+							}
+						}
+						mode = "origin";
+					}
+				}
+			}
 
-			test[0] = NULL;
-			test[1] = NULL;
-			picked[0] = NULL;
-			picked[1] = NULL;
+			test[0] = -1;
+			test[1] = -1;
+			picked[0] = -1;
+			picked[1] = -1;
 		}
 		else {
-			test[0] = NULL;
-			test[1] = NULL;
-			picked[0] = NULL;
-			picked[1] = NULL;
+			test[0] = -1;
+			test[1] = -1;
+			picked[0] = -1;
+			picked[1] = -1;
 
 		}
 	}
@@ -193,7 +220,7 @@ void PickingInterface::processHits (GLint hits, GLuint buffer[])
 		// possibly invoking a method on the scene class and passing "selected" and "nselected"
 		
 		for (int i=0; i<nselected; i++)
-			if(test[i]==NULL){
+			if(test[i]==-1){
 				test[i] = selected[i];
 			}
 			else{

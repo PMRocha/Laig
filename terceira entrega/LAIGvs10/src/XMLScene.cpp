@@ -812,7 +812,7 @@ void XMLScene::update(unsigned long millis) {
 
 	//place animation related ops here, usign dtseconds
 	//piece.move(dtseconds);
-	cout << picked << endl;
+	//cout << picked << endl; //I had to comment this out, it was really annoying :v
 	if(picked)
 		ring.draw();
 }

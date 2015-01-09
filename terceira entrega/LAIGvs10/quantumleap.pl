@@ -39,7 +39,7 @@ playGame(X, Stream) :-
 	printBoard(X1),
 	player2turn(X1, X2, Stream),
 	printBoard(X2),
-	playGame(X2).
+	playGame(X2, Stream).
 
 player1turn(Board1, Board2, Stream) :-
 	write('\nJOGADOR 1\n'),
@@ -56,11 +56,15 @@ player1Stage2(Board1, X, Y, Board2, Stream) :-
 	boardElementAt(Board1, X, Y, Piece),
 	Piece \== 'B',
 	write('## Como Jogador 1, deve escolher uma peca PRETA (B) ##\n'),
+	format(Stream, '~q.~n', [0]),
+	flush_output(Stream),
 	player1turn(Board1, Board2, Stream).
 
 player1Stage2(Board1, X, Y, Board2, Stream) :-
 	boardElementAt(Board1, X, Y, Piece),
 	Piece == 'B',
+	format(Stream, '~q.~n', [1]),
+	flush_output(Stream),
 	write('Para onde pretende mover esta peca?\n'),
 	write('X: '),
 	read(Stream, Xdest),
@@ -68,6 +72,8 @@ player1Stage2(Board1, X, Y, Board2, Stream) :-
 	write('Y: '),
 	read(Stream, Ydest),
 	write('Received Y pos: '), write(Ydest), write('\n'),
+	format(Stream, '~q.~n', [1]),
+	flush_output(Stream),
 	movePieceTo(Board1, X, Y, Xdest, Ydest, Board2).
 
 player2turn(Board1, Board2, Stream) :-
@@ -85,11 +91,15 @@ player2Stage2(Board1, X, Y, Board2, Stream) :-
 	boardElementAt(Board1, X, Y, Piece),
 	Piece \== 'W',
 	write('## Como Jogador 2, deve escolher uma peca BRANCA (W) ##\n'),
-	player1turn(Board1, Board2, Stream).
+	format(Stream, '~q.~n', [0]),
+	flush_output(Stream),
+	player2turn(Board1, Board2, Stream).
 
 player2Stage2(Board1, X, Y, Board2, Stream) :-
 	boardElementAt(Board1, X, Y, Piece),
 	Piece == 'W',
+	format(Stream, '~q.~n', [1]),
+	flush_output(Stream),
 	write('Para onde pretende mover esta peca?\n'),
 	write('X: '),
 	read(Stream, Xdest),
@@ -97,6 +107,8 @@ player2Stage2(Board1, X, Y, Board2, Stream) :-
 	write('Y: '),
 	read(Stream, Ydest),
 	write('Received Y pos: '), write(Ydest), write('\n'),
+	format(Stream, '~q.~n', [1]),
+	flush_output(Stream),
 	movePieceTo(Board1, X, Y, Xdest, Ydest, Board2).
 
 sendInitialState(X, Stream) :-

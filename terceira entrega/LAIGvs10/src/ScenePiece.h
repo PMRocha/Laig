@@ -23,6 +23,7 @@ public:
 	void setColor(char type, CGFtexture * scene);
 	void move(float deltaTime);
 	void setName(int row, int column);
+	bool checkName(int row, int column);
 };
 
 #endif
