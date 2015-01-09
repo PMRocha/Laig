@@ -136,3 +136,8 @@ char* Light::getId() const
 {
 	return id;
 }
+
+bool Light::getMarked() 
+{
+	return marked;
+}

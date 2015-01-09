@@ -187,7 +187,8 @@ void XMLScene::display()
 		{
 
 			sceneLights[i]->enable();
-			sceneLights[i]->draw();
+			if(sceneLights[i]->getMarked())
+				sceneLights[i]->draw();
 		}
 		else
 			sceneLights[i]->disable();

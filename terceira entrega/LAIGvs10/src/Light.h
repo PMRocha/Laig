@@ -31,6 +31,7 @@ public:
 	void disable();
 	void draw();
 	void update();
+	bool getMarked();
 };
 
 #endif
