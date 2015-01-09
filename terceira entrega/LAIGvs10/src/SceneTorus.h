@@ -14,14 +14,15 @@ private:
 	float outer;
 	int slices;
 	int loop;
-	int row;
-	int column;
+	
 	float ringRadius;
 	vector <vector<Point>> points;
 	vector <vector<Point>> normals;
 	vector <vector<Point>> texts;
 
 public:
+	int row;
+	int column;
 	SceneTorus(float inner,float outer,int slices,int loop);
 	~SceneTorus(void);
 	void normalsCalc();

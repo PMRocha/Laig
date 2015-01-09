@@ -43,6 +43,7 @@ public:
 	ScenePiece piece;
 	SceneAmbient ambient;
 	SceneTorus ring;
+	int row,column;
 	XMLScene(char *filename);
 	~XMLScene();
 	void init();

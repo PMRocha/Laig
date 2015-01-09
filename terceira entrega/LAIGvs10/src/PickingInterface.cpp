@@ -71,8 +71,6 @@ void PickingInterface::processMouse(int button, int state, int x, int y)
 			printf("Picked ID's: ");
 			cout << test[0] << " " << picked[0] << " " << test[1] << " " << picked[1] << " ";
 			printf("\n");
-			xene->picked = true;
-			xene->ring.move(picked[0],picked[1]);
 
 			//send picking data
 			if(test[1] != -1) {
@@ -86,6 +84,8 @@ void PickingInterface::processMouse(int button, int state, int x, int y)
 				connection.sendData(datac, strlen(datac));
 				std::cout << "Sent: " << datac << std::endl;
 				std::cout << "Size: " << strlen(datac) << std::endl;
+				xene->row=picked[0];
+				xene->column=picked[1];
 			}
 			if(test[0] != -1) {
 				std::string data;
@@ -98,6 +98,7 @@ void PickingInterface::processMouse(int button, int state, int x, int y)
 				connection.sendData(datac, strlen(datac));
 				std::cout << "Sent: " << datac << std::endl;
 				std::cout << "Size: " << strlen(datac) << std::endl;
+				
 			}
 			//receive confirmation
 			if(test[0] != -1) {
@@ -113,7 +114,8 @@ void PickingInterface::processMouse(int button, int state, int x, int y)
 						destX = picked[1];
 						destY = picked[0];
 						if(destX == originX && destY == originY) {
-							//make selection torus disappear here, deselect currently selected piece
+							xene->row=20;
+							xene->column=20;
 						}
 						for(int i = 0; i < xene->pieces.size(); i++) {
 							if(xene->pieces[i].checkName(destX, destY)){

@@ -89,7 +89,7 @@
 		<texture id="white" file="white.jpg" texlength_s="1" texlength_t="1" />
 		<texture id="tire" file="tire.png" texlength_s="0.6" texlength_t="2.5" />
         <texture id="stars" file="sky.jpg" texlength_s="1" texlength_t="1" />
-		<texture id="planet" file="planet.jpg" texlength_s="1" texlength_t="1" />
+		<texture id="planet" file="metal.jpg" texlength_s="1" texlength_t="1" />
         
     </textures>
 

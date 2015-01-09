@@ -1,19 +1,75 @@
-﻿Build started 1/9/2015 3:26:47 AM.
-     1>Project "C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\LAIGvs10.vcxproj" on node 2 (build target(s)).
+﻿Build started 1/9/2015 11:23:11 AM.
+     1>Project "C:\Users\Pedro\Desktop\Laig\terceira entrega\LAIGvs10\LAIGvs10.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\LAIGvs10.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt src\PickingInterface.cpp src\SceneBoard.cpp src\ScenePiece.cpp src\TPinterface.cpp src\XMLScene.cpp src\main.cpp
-         main.cpp
-         ScenePiece.cpp
-         Generating Code...
-         Skipping... (no relevant changes detected)
+         D:\VisualStudio2010\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt src\Animation.cpp src\Appearance.cpp src\Camera.cpp src\conn.cpp src\FlagShader.cpp src\Globals.cpp src\Graph.cpp src\Light.cpp src\main.cpp src\Node.cpp src\OrthoCamera.cpp src\PerspectiveCamera.cpp src\PickingInterface.cpp src\SceneAmbient.cpp src\SceneBlock.cpp src\SceneBoard.cpp src\SceneFlag.cpp src\ScenePatch.cpp src\ScenePiece.cpp src\ScenePlane.cpp src\Rotation.cpp src\Scaling.cpp src\SceneCylinder.cpp src\SceneObject.cpp src\SceneRectangle.cpp src\SceneSphere.cpp src\SceneTorus.cpp src\SceneTriangle.cpp src\Texture.cpp src\tinystr.cpp src\tinyxml.cpp src\tinyxmlerror.cpp src\tinyxmlparser.cpp src\TPinterface.cpp src\Transformation.cpp src\Translation.cpp src\XMLScene.cpp
          XMLScene.cpp
+     1>c:\users\pedro\desktop\laig\terceira entrega\laigvs10\src\xmlscene.cpp(40): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\pedro\desktop\laig\terceira entrega\laigvs10\src\xmlscene.cpp(379): warning C4101: 'sWrap' : unreferenced local variable
+     1>c:\users\pedro\desktop\laig\terceira entrega\laigvs10\src\xmlscene.cpp(379): warning C4101: 'tWrap' : unreferenced local variable
+     1>c:\users\pedro\desktop\laig\terceira entrega\laigvs10\src\xmlscene.cpp(665): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\visualstudio2010\vc\include\stdio.h(325) : see declaration of 'sscanf'
+         Translation.cpp
+         Transformation.cpp
          TPinterface.cpp
+         tinyxmlparser.cpp
+         tinyxmlerror.cpp
+         tinyxml.cpp
+         tinystr.cpp
+         Texture.cpp
+         SceneTriangle.cpp
+         SceneTorus.cpp
+         SceneSphere.cpp
+         SceneRectangle.cpp
+         SceneObject.cpp
+         SceneCylinder.cpp
+         Scaling.cpp
+         Rotation.cpp
+         ScenePlane.cpp
+         ScenePiece.cpp
+         ScenePatch.cpp
+         Generating Code...
+         Compiling...
+         SceneFlag.cpp
          SceneBoard.cpp
+         SceneBlock.cpp
+         SceneAmbient.cpp
          PickingInterface.cpp
+     1>c:\users\pedro\desktop\laig\terceira entrega\laigvs10\src\pickinginterface.cpp(82): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\visualstudio2010\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\users\pedro\desktop\laig\terceira entrega\laigvs10\src\pickinginterface.cpp(83): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\visualstudio2010\vc\include\string.h(110) : see declaration of 'strcat'
+     1>c:\users\pedro\desktop\laig\terceira entrega\laigvs10\src\pickinginterface.cpp(96): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\visualstudio2010\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\users\pedro\desktop\laig\terceira entrega\laigvs10\src\pickinginterface.cpp(97): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\visualstudio2010\vc\include\string.h(110) : see declaration of 'strcat'
+     1>c:\users\pedro\desktop\laig\terceira entrega\laigvs10\src\pickinginterface.cpp(119): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\pedro\desktop\laig\terceira entrega\laigvs10\src\pickinginterface.cpp(124): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\pedro\desktop\laig\terceira entrega\laigvs10\src\pickinginterface.cpp(226): warning C4018: '<' : signed/unsigned mismatch
+         PerspectiveCamera.cpp
+         OrthoCamera.cpp
+         Node.cpp
+     1>c:\users\pedro\desktop\laig\terceira entrega\laigvs10\src\node.cpp(121): warning C4018: '<' : signed/unsigned mismatch
+         main.cpp
+         Light.cpp
+         Graph.cpp
+     1>c:\users\pedro\desktop\laig\terceira entrega\laigvs10\src\graph.cpp(118): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\pedro\desktop\laig\terceira entrega\laigvs10\src\graph.cpp(129): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\pedro\desktop\laig\terceira entrega\laigvs10\src\graph.cpp(130): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\pedro\desktop\laig\terceira entrega\laigvs10\src\graph.cpp(143): warning C4018: '<' : signed/unsigned mismatch
+         Globals.cpp
+         FlagShader.cpp
+         conn.cpp
+         Camera.cpp
+         Appearance.cpp
+     1>c:\users\pedro\desktop\laig\terceira entrega\laigvs10\src\appearance.cpp(17): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\pedro\desktop\laig\terceira entrega\laigvs10\src\appearance.cpp(17): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         Animation.cpp
+     1>c:\users\pedro\desktop\laig\terceira entrega\laigvs10\src\animation.cpp(128): warning C4018: '<' : signed/unsigned mismatch
+         Generating Code...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\LAIGvs10.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib WS2_32.lib lib\TinyXML.lib lib\glew32.lib lib\glew32mx.lib lib\glew32mxs.lib lib\glew32s.lib lib\glui32.lib lib\glui32d.lib lib\glut32.lib lib\CGFlib.lib /MANIFEST /ManifestFile:"Debug\LAIGvs10.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\LAIGvs10.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\LAIGvs10.lib" /MACHINE:X86 Debug\Animation.obj
+         D:\VisualStudio2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Pedro\Desktop\Laig\terceira entrega\LAIGvs10\Debug\LAIGvs10.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib WS2_32.lib lib\TinyXML.lib lib\glew32.lib lib\glew32mx.lib lib\glew32mxs.lib lib\glew32s.lib lib\glui32.lib lib\glui32d.lib lib\glut32.lib lib\CGFlib.lib /MANIFEST /ManifestFile:"Debug\LAIGvs10.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Pedro\Desktop\Laig\terceira entrega\LAIGvs10\Debug\LAIGvs10.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Pedro\Desktop\Laig\terceira entrega\LAIGvs10\Debug\LAIGvs10.lib" /MACHINE:X86 Debug\Animation.obj
          Debug\Appearance.obj
          Debug\Camera.obj
          Debug\conn.obj
@@ -50,27 +106,26 @@
          Debug\Transformation.obj
          Debug\Translation.obj
          Debug\XMLScene.obj
-         LINK : C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\LAIGvs10.exe not found or not built by the last incremental link; performing full link
-     1>CGFlib.lib(CGFappearance.obj) : warning LNK4204: 'C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
-     1>CGFlib.lib(CGFapplication.obj) : warning LNK4204: 'C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
-     1>CGFlib.lib(CGFaxis.obj) : warning LNK4204: 'C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
-     1>CGFlib.lib(CGFcamera.obj) : warning LNK4204: 'C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
-     1>CGFlib.lib(CGFinterface.obj) : warning LNK4204: 'C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
-     1>CGFlib.lib(CGFlight.obj) : warning LNK4204: 'C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
-     1>CGFlib.lib(CGFobject.obj) : warning LNK4204: 'C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
-     1>CGFlib.lib(CGFscene.obj) : warning LNK4204: 'C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
-     1>CGFlib.lib(CGFshader.obj) : warning LNK4204: 'C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
-     1>CGFlib.lib(CGFtexture.obj) : warning LNK4204: 'C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
-     1>CGFlib.lib(imagetools.obj) : warning LNK4204: 'C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
-     1>CGFlib.lib(stb_image.obj) : warning LNK4204: 'C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
-         LAIGvs10.vcxproj -> C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\LAIGvs10.exe
+     1>CGFlib.lib(CGFappearance.obj) : warning LNK4204: 'C:\Users\Pedro\Desktop\Laig\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>CGFlib.lib(CGFapplication.obj) : warning LNK4204: 'C:\Users\Pedro\Desktop\Laig\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>CGFlib.lib(CGFaxis.obj) : warning LNK4204: 'C:\Users\Pedro\Desktop\Laig\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>CGFlib.lib(CGFcamera.obj) : warning LNK4204: 'C:\Users\Pedro\Desktop\Laig\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>CGFlib.lib(CGFinterface.obj) : warning LNK4204: 'C:\Users\Pedro\Desktop\Laig\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>CGFlib.lib(CGFlight.obj) : warning LNK4204: 'C:\Users\Pedro\Desktop\Laig\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>CGFlib.lib(CGFobject.obj) : warning LNK4204: 'C:\Users\Pedro\Desktop\Laig\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>CGFlib.lib(CGFscene.obj) : warning LNK4204: 'C:\Users\Pedro\Desktop\Laig\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>CGFlib.lib(CGFshader.obj) : warning LNK4204: 'C:\Users\Pedro\Desktop\Laig\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>CGFlib.lib(CGFtexture.obj) : warning LNK4204: 'C:\Users\Pedro\Desktop\Laig\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>CGFlib.lib(imagetools.obj) : warning LNK4204: 'C:\Users\Pedro\Desktop\Laig\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>CGFlib.lib(stb_image.obj) : warning LNK4204: 'C:\Users\Pedro\Desktop\Laig\terceira entrega\LAIGvs10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+         LAIGvs10.vcxproj -> C:\Users\Pedro\Desktop\Laig\terceira entrega\LAIGvs10\Debug\LAIGvs10.exe
        Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\Debug\LAIGvs10.exe;#1" /manifest Debug\LAIGvs10.exe.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Pedro\Desktop\Laig\terceira entrega\LAIGvs10\Debug\LAIGvs10.exe;#1" /manifest Debug\LAIGvs10.exe.intermediate.manifest
        FinalizeBuildStatus:
          Deleting file "Debug\LAIGvs10.unsuccessfulbuild".
          Touching "Debug\LAIGvs10.lastbuildstate".
-     1>Done Building Project "C:\Users\Zephiro309\Desktop\System\FEUP\ano3\semestre1\LAIG\repo\terceira entrega\LAIGvs10\LAIGvs10.vcxproj" (build target(s)).
+     1>Done Building Project "C:\Users\Pedro\Desktop\Laig\terceira entrega\LAIGvs10\LAIGvs10.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:04.01
+Time Elapsed 00:00:21.02

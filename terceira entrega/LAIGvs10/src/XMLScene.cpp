@@ -8,6 +8,9 @@ XMLScene::XMLScene(char *filename) :
 	this->filename=filename;
 	drawmode=0;
 
+	row=20;
+	column=20;
+
 	lastTime = 0;
 	thisTime = 0;
 }
@@ -194,6 +197,15 @@ void XMLScene::display()
 
 	selectDrawMode();
 	ambient.draw(appearances["stars1"]);
+
+	glPushMatrix();
+	
+	appearances["planet"]->apply();
+
+	ring.draw();
+
+	glPopMatrix();
+
 	drawObjects();
 	glutSwapBuffers();
 }
@@ -813,6 +825,9 @@ void XMLScene::update(unsigned long millis) {
 	//place animation related ops here, usign dtseconds
 	//piece.move(dtseconds);
 	//cout << picked << endl; //I had to comment this out, it was really annoying :v
-	if(picked)
-		ring.draw();
+	glPushMatrix();
+
+	ring.move(row,column);
+
+	glPopMatrix();
 }

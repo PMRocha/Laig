@@ -42,6 +42,18 @@ void SceneTorus::draw()
 	int nextP,nextC;
 	float auxTextX=0,auxTextY=0;
 
+	glTranslatef(0.0f, 0.0f, (1.5*row));
+	for(int i=0;i<row;i++){
+		glTranslatef(-sin(PI/3.0), 0.0f,0.0f);
+	}
+	//slide along table's x axis
+	for(int i=0;i<column;i++){
+		glTranslatef(2*sin(PI/3.0), 0.0f,0.0f);
+	}
+	glRotatef(-90,1,0,0);
+
+	glScalef(0.5,0.5,0.5);
+
 	for (unsigned int i = 0; i < points.size()-1;i++)
 	{
 
