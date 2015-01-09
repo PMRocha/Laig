@@ -1,7 +1,7 @@
 #include "XMLScene.h"
 
 XMLScene::XMLScene(char *filename) :
-	piece(2.0, 2.0, 2.0),ring(0.9,1.0,5,5)
+	piece(2.0, 2.0, 2.0),ring(0.9,1.0,20,20)
 {
 
 	// Read XML from file

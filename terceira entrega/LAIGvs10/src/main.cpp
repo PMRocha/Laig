@@ -11,6 +11,7 @@ int main (int argc, char* argv[])
 {
 	CGFapplication app = CGFapplication();
 	 XMLScene* xml;
+	 PickingInterface * pi;
 	if(argc==2)
 		xml = new XMLScene(argv[1]);
 	else
@@ -20,7 +21,8 @@ int main (int argc, char* argv[])
 		 
 		app.setScene(xml);
 		app.setInterface(new TPinterface());
-		app.setInterface(new PickingInterface(xml));
+		pi = new PickingInterface(xml);
+		app.setInterface(pi);
 		app.run();
 	}
 	catch(GLexception& ex) {
@@ -31,5 +33,6 @@ int main (int argc, char* argv[])
 		cout << "Erro inesperado: " << ex.what();
 		return -1;
 	}
+
 	return 0;
 }
