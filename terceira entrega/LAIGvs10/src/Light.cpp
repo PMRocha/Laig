@@ -127,7 +127,9 @@ void Light::draw()
 
 void Light::update()
 {
-	light->update();
+	if(marked){
+		light->update();
+	}
 }
 
 char* Light::getId() const
