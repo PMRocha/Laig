@@ -60,11 +60,11 @@ void ScenePiece::setColor(char type, CGFtexture * scene){
 		texture = scene;
 }
 
-void ScenePiece::setName(int row, int column){
+void ScenePiece::setName(int column, int row){
 	this->row = row;
 	this->column = column;
 }
 
-bool ScenePiece::checkName(int row, int column) {
+bool ScenePiece::checkName(int column, int row) {
 	return (this->row == row && this->column == column);
 }

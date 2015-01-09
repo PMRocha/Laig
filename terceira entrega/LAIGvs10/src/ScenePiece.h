@@ -22,8 +22,8 @@ public:
 	void draw(void);
 	void setColor(char type, CGFtexture * scene);
 	void move(float deltaTime);
-	void setName(int row, int column);
-	bool checkName(int row, int column);
+	void setName(int column, int row);
+	bool checkName(int column, int row);
 };
 
 #endif
