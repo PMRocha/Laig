@@ -112,6 +112,9 @@ void PickingInterface::processMouse(int button, int state, int x, int y)
 					} else {
 						destX = picked[1];
 						destY = picked[0];
+						if(destX == originX && destY == originY) {
+							//make selection torus disappear here, deselect currently selected piece
+						}
 						for(int i = 0; i < xene->pieces.size(); i++) {
 							if(xene->pieces[i].checkName(destX, destY)){
 								xene->pieces.erase(xene->pieces.begin() + i);
